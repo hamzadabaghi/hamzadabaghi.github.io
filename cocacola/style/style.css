@@ -1,0 +1,169 @@
+:root {
+  --primary-color: #F40009;
+  --bg-color: #050a0f;
+  --bg-color-white: #f9fffb;
+  --bg-color-red: #F40009;
+  --text-color: #f9fffb;
+  --text-color-red: #F40009;
+  --primary-font-family: "TCCC-UnityHeadline Bold";
+  --secondary-font-family: "Mogra";
+  --light-gray-color: 211, 211, 211;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 20px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  margin-top: 41px;
+  align-items: center;
+  padding: 0 222px;
+}
+
+li a:hover {
+  color: var(--primary-color);
+}
+
+main .container {
+  display: flex;
+  margin: 0 222px 90px 222px;
+  gap: 67px;
+  width: 81%;
+  justify-content: space-evenly;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 99%;
+}
+
+ul > li {
+  font-size: 25px;
+  flex: 1;
+  font-family: var(--primary-font-family);
+  font-style: normal;
+  font-weight: 800;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  flex:1;
+  padding: 17px 207px;
+  gap: 110px;
+}
+
+.active {
+  color: var(--primary-color);
+}
+
+.bubbles {
+  width: 170px;
+  height: 170px;
+  position: absolute;
+  margin-top: 20px;
+}
+
+.can {
+  width: 672px;
+  height: 672px;
+  object-fit: cover;
+  filter: drop-shadow(0px -45px 90px rgba(var(--light-gray-color), 0.5));
+  margin-top: 75px;
+}
+
+.circle-overlay {
+  position: absolute;
+  display: block;
+  width: 160px;
+  height: 160px;
+  pointer-events: none;
+  z-index: 1;
+  left: 627px;
+  transition: left 0.3s ease-in-out; 
+}
+
+.ellipse {
+  width: 229px;
+  height: 70px;
+  fill: #FFF;
+  filter: blur(5.5px);
+  z-index: 10;
+  margin-top: -70px;
+}
+
+.img-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo{
+  width: 216px;
+  height: 68px;
+  object-fit: cover;
+}
+
+.logo:hover {
+  filter: brightness(0) invert(1) grayscale(1);
+  transition: filter 0.3s ease;
+}
+
+.menu {
+  width: 47px;
+  height: 35.222px;
+}
+
+.quote h2 {
+  font-size: 128px;
+  line-height: 138px;
+  font-family: var(--primary-font-family);
+  width: 772px;
+  margin: 0;
+  padding-top: 107px;
+  margin-bottom: 45px;
+}
+
+.quote {
+  flex: 1;
+}
+
+.quote-red {
+  color: var(--text-color-red);
+  font-family: var(--secondary-font-family);
+}
+
+.quote-shadowed {
+  text-shadow: -43px 33px 145px var(--primary-color);
+}
+
+.shop-now-btn {
+  background-color: var(--primary-color);
+  border-radius: 42px;
+  font-family: var(--primary-font-family);
+  font-size: 29px;
+  font-style: normal;
+  font-weight: 800;
+  padding: 18px 32px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.shop-now-btn:hover {
+  background-color: var(--bg-color-white);
+  color: var(--text-color-red);
+}
