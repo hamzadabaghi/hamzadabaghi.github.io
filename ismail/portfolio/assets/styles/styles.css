@@ -1,11 +1,102 @@
-------------- global settings ------------- 
+/* ------------- global settings ------------- */
 
 * {
     box-sizing: border-box;
+    font-size : 62.5%;
 }
 
+:root {
+    --primary-bg-color: #151f2c;
+    --secondary-bg-color: #194548;
+    --primary-text-color: #fefefe;
+    --secondary-text-color: #00f060;
+    --secondary-bg-color-buttons: #0686ce;
+    --primary-font-stack: 'Poppins', sans-serif;
+    --secondary-font-stack: sans-serif;
+    --phone-width: 76.7rem;
+    --tablet-min-width: 76.8rem;
+    --tablet-max-width: 102.3rem;
+    --desktop-width: 102.4rem;
+}
 
 body {
+    background-color: var(--primary-bg-color);
+    color: var(--primary-text-color);
+    font-family: var(--primary-font-stack);
+    font-size: 9rem;
+    height: 100vh;
+    overflow-x: hidden;
+    padding: 3rem 10rem;
+}
 
-   font-size : 62.5%;
+a {
+    color: var(--primary-text-color);
+    text-decoration: none;
+}
+
+a:is(:active,:hover) {
+    color: var(--secondary-text-color);
+}
+
+/*------------- header -------------*/
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 10rem;
+    height: 6rem;
+}
+
+header img {
+    object-fit: cover;
+    height: 8rem;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    font-size: 7rem;
+    gap: 10rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    line-height: 1;
+    display: flex;
+}
+
+nav ul li a {
+    font-weight: 600;
+    font-size: 2.1rem;
+}
+
+header button {
+    font-size: 2rem;
+    background-color: transparent;
+    padding: 2.3rem 4.3rem;
+    border-radius: 4rem;
+    border: 0.2rem solid var(--secondary-text-color);
+    line-height: 0;
+    cursor: pointer;
+}
+
+header button a {
+    font-size: 2rem;
+    color: var(--secondary-text-color);
+}
+
+/*------------- main:home -------------*/
+
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.home--avatar img {
+    width: 60rem;
+    height: 90rem;
+    object-fit: cover;
 }

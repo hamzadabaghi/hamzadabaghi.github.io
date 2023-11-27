@@ -36,3 +36,4 @@ best practices :
 - use shorthand properties in css
 - disable horizonral overflow and set the width to the viewport
 - only use em within media query definitions (min-width: 20em), never pixels
+- use aspect-ratio in media queries
