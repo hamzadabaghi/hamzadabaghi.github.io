@@ -26,15 +26,14 @@
     --tablet-min-width: 76.8rem;
     --tablet-max-width: 102.3rem;
     --desktop-width: 102.4rem;
-    --app-inline-padding : 2rem;
+    --app-inline-padding : 5rem;
     --app-transitions-duration : 300ms;
     --navbar-height : 5rem;
-    /*font size variables*/
     --fs-sm : .7rem;
     --fs-normale : 1rem;
     --fs-smd : 1.5rem;
     --fs-md : 2rem;
-    --fs-lg : 3rem;
+    --fs-md : 3rem;
     --fs-xl : 5rem;
 }
 *,*::before,*::after {
@@ -52,7 +51,6 @@ body {
     overflow-x: hidden;
 }
 section:not(:first-of-type){
-    /* padding: 10rem 0; */
     margin-block: 5rem;
 }
 a {
@@ -86,7 +84,7 @@ a:hover {
     align-items: center;
     width: fit-content;
     gap: .7rem;
-    text-decoration: none; /*if applied to a link*/
+    text-decoration: none;
     background: var(--secondary-color);
     padding: .8rem 2rem;
     border-radius: var(--_radius);
@@ -135,8 +133,8 @@ nav .adjustive{
 }
 .app-brand{
     color: var(--primary-color);
-    padding-inline: .3rem;/*to solve some problems with font used*/
-    font-size: var(--fs-lg);
+    padding-inline: .3rem;
+    font-size: var(--fs-md);
     font-family: var(--secondary-font-stack);
     padding: 0.7rem 0.5rem 0 0.5rem;
 }
@@ -158,7 +156,7 @@ nav .adjustive{
 .app-hireme-btn>.text{
     background: var(--primary-gradient);
     background-size: 150%;
-    -webkit-background-clip: text; /*for chromiom browsers*/
+    -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
     transition: color var(--app-transitions-duration);
@@ -183,11 +181,10 @@ nav .adjustive{
     right: 0;
 }
 .nav-menu-container{
-    /* display: flex; */
     display: none;
     align-items: center;
     justify-content: center;
-    font-size: var(--fs-lg);
+    font-size: var(--fs-md);
     transition: opacity var(--app-transitions-duration);
 }
 .nav-menu-container.hidden{
@@ -199,7 +196,8 @@ nav .adjustive{
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 2.3rem;
+    padding: 0;
 }
 /*------------- main:hero -------------*/
 .app-hero {
@@ -217,11 +215,11 @@ nav .adjustive{
     gap: 2rem;
 }
 .app-hero .column-2{
-    padding-right: 4rem; /*the image needs more padding usually than text*/
+    padding-right: 4rem;
 }
 
 .avatar img {
-    width: 100%;
+    width: 80%;
     object-fit: cover;
     filter: drop-shadow(0 0 100px var(--primary-color-transparent));
 }
@@ -235,6 +233,13 @@ nav .adjustive{
 .heading__greeting {
     font-weight: 6OO;
     line-height: 1;
+    display: inline-flex;
+    color: var(--primary-color);
+}
+
+.heading__greeting .app-icon {
+    font-size: var(--fs-md);
+    padding-left: 0.5rem;
 }
 
 .heading__fullname {
@@ -307,5 +312,6 @@ nav .adjustive{
 @media screen and (max-width: 500px){
     :root{
         font-size: 12px;
+        --app-inline-padding : 3rem;
     }
 }
