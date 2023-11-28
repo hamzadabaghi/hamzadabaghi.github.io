@@ -119,6 +119,7 @@ header button a {
     align-items: center;
     justify-content: space-between;
     gap: 0;
+    max-height: 100rem;
 }
 
 #home > div {
@@ -126,12 +127,45 @@ header button a {
 }
 
 .avatar {
-    margin: 0;
-    padding: 10rem;
+    margin: auto;
+    width: fit-content;
 }
 
 .avatar img {
-    width: 60rem;
-    height: 90rem;
+    width: 50rem;
+    height: 74rem;
     object-fit: cover;
+}
+
+.heading {
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 7rem;
+}
+
+.heading__greeting {
+    font-weight: 6OO;
+}
+
+.heading__fullname {
+    font-size: 9rem;
+}
+
+.heading__job {
+    font-size: 6rem;
+    color: var(--primary-text-color);
+    -webkit-text-stroke: 1px var(--primary-text-color);
+    -webkit-text-fill-color: var(--primary-text-color);
+}
+
+#home div:first-child button {
+    font-size: 2rem;
+    background-color: transparent;
+    padding: 2.7rem 4rem;
+    border-radius: 4rem;
+    line-height: 0;
+    color: var(--primary-text-color);
+    cursor: pointer;
+    background: var(--secondary-bg-color-buttons);
+    border: none;
 }
