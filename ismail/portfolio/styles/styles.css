@@ -3,9 +3,9 @@
 @font-face {
     font-family: 'Gellisa Script';
     src: local('Gellisa Script Regular'), local('Gellisa-Script-Regular'),
-        url('../fonts/GellisaScript.woff2') format('woff2'),
-        url('../fonts/GellisaScript.woff') format('woff'),
-        url('../fonts/GellisaScript.ttf') format('truetype');
+        url('../assets/fonts/GellisaScript.woff2') format('woff2'),
+        url('../assets/fonts/GellisaScript.woff') format('woff'),
+        url('../assets/fonts/GellisaScript.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
 }
