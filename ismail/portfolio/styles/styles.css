@@ -265,6 +265,7 @@ nav ul {
     }
     .app-hero .column-2{
         position: absolute;
+        padding-right: 1rem;
         display: flex;
         z-index: 1;
         align-items: center;
@@ -295,4 +296,9 @@ nav ul {
             var(--primary-bg-color),
             var(--primary-bg-color-transparent),transparent);
    }
+}
+@media screen and (max-width: 500px){
+    :root{
+        font-size: 12px;
+    }
 }
