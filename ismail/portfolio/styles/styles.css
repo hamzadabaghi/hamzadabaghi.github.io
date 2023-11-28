@@ -135,6 +135,7 @@ nav ul {
     padding-inline: .3rem;/*to solve some problems with font used*/
     font-size: var(--fs-lg);
     font-family: var(--secondary-font-stack);
+    padding: 0.7rem 0.5rem 0 0.5rem;
 }
 .app-hireme-btn{
     --_border-width: 2px;
