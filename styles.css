@@ -220,9 +220,9 @@ nav .adjustive{
 }
 
 .avatar img {
-    /*width: 80%;*/
-    /*the image doesn't controle it's size just give it 100% and let grid system control it's size for a responsive behavior*/
-    width: 100%;
+    /*width : 80%;*/
+    width: 100%; 
+    /*the image doesn't controle it's width give it a width of full and let it's parent detect it's size in this case the grid system does the job*/
     object-fit: cover;
     filter: drop-shadow(0 0 100px var(--primary-color-transparent));
 }
