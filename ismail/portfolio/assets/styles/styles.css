@@ -66,6 +66,7 @@ header > a:first-child {
     font-family: var(--secondary-font-stack);
     background: var(--primary-text-color);
     background: linear-gradient(135deg, rgba(2,231,237,1) 0%, rgba(42,184,6,1) 100%);
+    background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
     width: 8.5%;
@@ -106,6 +107,7 @@ header button a {
     background: var(--primary-text-color);
     background : linear-gradient(135deg, rgba(2,231,237,1) 0%, rgba(23,97,4,1) 100%);
     width : fit-content;
+    background-clip: text;
     -webkit-background-clip :text;
     color : transparent;
 }
