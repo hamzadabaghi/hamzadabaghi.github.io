@@ -17,6 +17,15 @@
   </head>
   <body>
     <header>
+      <div class="overlay nav-menu-container hidden" id="menu-container">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
       <nav>
         <a href="#" class="app-brand">Ismail</a>
         <ul>
@@ -28,6 +37,9 @@
         </ul>
         <a href="#" class="btn app-hireme-btn"><span class="text">Hire me</span></a>
       </nav>
+      <div class="menu-wrapper" id="menu-toggler">
+        <ion-icon name="menu" class="menu-icon"></ion-icon>
+      </div>
     </header>
     <main>
       <section id="home">
@@ -41,7 +53,7 @@
         </div>
         <div>
           <figure class="avatar">
-            <img src="assets/images/avatar.png" alt="My image as an avatar" />
+            <!-- <img src="assets/images/avatar.png" alt="My image as an avatar" /> -->
           </figure>
         </div>
       </section>
@@ -65,6 +77,8 @@
     <footer>
       <p>&copy; 2023 Ismail. All rights reserved.</p>
     </footer>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
