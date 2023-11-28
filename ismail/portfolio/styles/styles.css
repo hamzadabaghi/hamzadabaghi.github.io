@@ -16,7 +16,7 @@
     --secondary-bg-color: #194548;
     --primary-text-color: #fefefe;
     --primary-color: #00f060;
-    --primary-color-transparent: #00f06050;
+    --primary-color-transparent: #00f06030;
     --secondary-color: #0686ce;
     --primary-gradient: linear-gradient(120deg,#0686ce,#00f060);
     --secondary-color-dark: #0167a1;
@@ -129,6 +129,9 @@ nav ul {
     display: flex;
     list-style: none;
     gap: 2rem;
+}
+nav .adjustive{
+    display: none;
 }
 .app-brand{
     color: var(--primary-color);
@@ -250,6 +253,9 @@ nav ul {
 @container header (width < 1000px) {
     nav ul{
         display: none;
+    }
+    nav .adjustive{
+        display: block;
     }
     .menu-wrapper{
         display: block;
