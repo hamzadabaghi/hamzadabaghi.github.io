@@ -1,5 +1,15 @@
 /* ------------- global settings ------------- */
 
+@font-face {
+    font-family: 'Gellisa Script';
+    src: local('Gellisa Script Regular'), local('Gellisa-Script-Regular'),
+        url('../fonts/GellisaScript.woff2') format('woff2'),
+        url('../fonts/GellisaScript.woff') format('woff'),
+        url('../fonts/GellisaScript.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
 * {
     box-sizing: border-box;
     font-size : 62.5%;
@@ -12,7 +22,7 @@
     --secondary-text-color: #00f060;
     --secondary-bg-color-buttons: #0686ce;
     --primary-font-stack: 'Poppins', sans-serif;
-    --secondary-font-stack: sans-serif;
+    --secondary-font-stack: 'Gellisa Script';
     --phone-width: 76.7rem;
     --tablet-min-width: 76.8rem;
     --tablet-max-width: 102.3rem;
@@ -35,7 +45,11 @@ a {
 }
 
 a:is(:active,:hover) {
-    color: var(--secondary-text-color);
+    color: var(--secondary-bg-color-buttons);
+}
+
+section {
+    padding: 10rem 0;
 }
 
 /*------------- header -------------*/
@@ -48,9 +62,14 @@ header {
     height: 6rem;
 }
 
-header img {
-    object-fit: cover;
-    height: 8rem;
+header > a:first-child {
+    font-family: var(--secondary-font-stack);
+    background: var(--primary-text-color);
+    background: linear-gradient(135deg, rgba(2,231,237,1) 0%, rgba(42,184,6,1) 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+    width: 8.5%;
+    padding: 3.5rem 0.5rem 0 0.5rem;
 }
 
 nav ul {
@@ -68,14 +87,14 @@ nav ul li {
 }
 
 nav ul li a {
-    font-weight: 600;
-    font-size: 2.1rem;
+    font-weight: 300;
+    font-size: 1.9rem;
 }
 
 header button {
     font-size: 2rem;
     background-color: transparent;
-    padding: 2.3rem 4.3rem;
+    padding: 2.3rem 3rem;
     border-radius: 4rem;
     border: 0.2rem solid var(--secondary-text-color);
     line-height: 0;
@@ -84,7 +103,11 @@ header button {
 
 header button a {
     font-size: 2rem;
-    color: var(--secondary-text-color);
+    background: var(--primary-text-color);
+    background : linear-gradient(135deg, rgba(2,231,237,1) 0%, rgba(23,97,4,1) 100%);
+    width : fit-content;
+    -webkit-background-clip :text;
+    color : transparent;
 }
 
 /*------------- main:home -------------*/
@@ -93,9 +116,10 @@ header button a {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 0;
 }
 
-.home--avatar img {
+.avatar img {
     width: 60rem;
     height: 90rem;
     object-fit: cover;
