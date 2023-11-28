@@ -121,6 +121,15 @@ header button a {
     gap: 0;
 }
 
+#home > div {
+    flex: 1;
+}
+
+.avatar {
+    margin: 0;
+    padding: 10rem;
+}
+
 .avatar img {
     width: 60rem;
     height: 90rem;
