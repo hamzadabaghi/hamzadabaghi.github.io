@@ -207,8 +207,7 @@ nav .adjustive{
     position: relative;
     display: grid;
     grid-template-columns: 60% 40%;
-    align-items: center;
-    height: calc(100vh - var(--navbar-height));
+    /* align-items: center; */
     padding: calc(var(--app-inline-padding) * 2);
     margin-bottom: 10rem;
 }
@@ -221,15 +220,10 @@ nav .adjustive{
 .app-hero .column-2{
     padding-right: 4rem;
 }
-
-.avatar img {
-    /*width: 80%;*/
-    /*the image doesn't controle it's size just give it 100% and let grid system control it's size for a responsive behavior*/
+.avatar{
     width: 100%;
-    object-fit: cover;
     filter: drop-shadow(0 0 100px var(--primary-color-transparent));
 }
-
 .heading {
     font-size: var(--fs-md);
     font-weight: 700;
@@ -259,17 +253,15 @@ nav .adjustive{
     letter-spacing: .2rem;
 }
 
-/*------------containers_media_queries-------------*/
+/*------------media_queries-------------*/
 
-@container header (width < 1000px) {
+@media screen and (max-width: 1100px){
     nav ul{
         display: none;
     }
     nav .adjustive{
         display: block;
     }
-}
-@media screen and (max-width: 1000px){
     .app-hero{
         position: relative;
         z-index: -1;
@@ -277,25 +269,19 @@ nav .adjustive{
     }
     .app-hero .column-2{
         position: absolute;
+        inset: 0;
+        z-index: -1;
         padding-right: 1rem;
         display: flex;
-        z-index: 1;
         align-items: center;
         justify-content: flex-end;
-        height: 80%;
-        width: 100%;
-        z-index: -1;
     }
-    .app-hero .column-2 .avatar{
-        display: flex;
-        justify-content: flex;
-        height: 100%;
-    }
-    .app-hero .column-2 img{
+    .app-hero .column-2 .avatar{      
         z-index: -1;
-        filter: brightness(.4);
+        filter: brightness(.6) drop-shadow(0 0 100px var(--primary-color-transparent));
         height: 100%;
-   }
+        width: fit-content;
+    }
    .app-hero .column-1{
        width: 100%;
     }
@@ -304,6 +290,7 @@ nav .adjustive{
         position: absolute;
         inset: 0;
         z-index: -1;
+        filter: blur(20px);
         background: linear-gradient(90deg,
         var(--primary-bg-color),
         var(--primary-bg-color-transparent),transparent);
