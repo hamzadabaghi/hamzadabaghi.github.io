@@ -16,8 +16,14 @@
     <link rel="stylesheet" href="styles/normalize.css" />
   </head>
   <body>
-    <header> 
-      <div class="overlay nav-menu-container hidden" id="menu-container">
+    <div class="menu-overlay hidden" id="menu-container">
+      <nav>
+        <a href="#" class="app-brand">Ismail</a>
+        <div class="menu-wrapper menu-toggler" >
+          <ion-icon name="menu" class="menu-icon"></ion-icon>
+        </div>
+      </nav>
+      <div class="nav-menu-container">
         <ul>
           <li><a href="#">Home</a></li>
           <li><a href="#about">About</a></li>
@@ -26,6 +32,8 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
+    </div>
+    <header> 
       <nav>
         <a href="#" class="app-brand">Ismail</a>
         <ul>
@@ -38,7 +46,7 @@
         <a href="#" class="btn app-hireme-btn"><span class="text">Hire me</span></a>
         <span class="adjustive"></span>
       </nav>
-      <div class="menu-wrapper" id="menu-toggler">
+      <div class="menu-wrapper menu-toggler" >
         <ion-icon name="menu" class="menu-icon"></ion-icon>
       </div>
     </header>
