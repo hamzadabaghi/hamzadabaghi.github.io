@@ -304,7 +304,7 @@ nav .adjustive {
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template: repeat(2, 1fr) / repeat(3, 1fr);
     gap: var(--gap);
     --gap: 4rem;
     --line-offset: calc(var(--gap) / 2);
@@ -439,11 +439,29 @@ footer p {
     .two-columns {
         grid-template-columns: 1fr;
     }
+
+    .gallery {
+        grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+        --gap: 2rem;
+    }
+
+    .gallery div:not(:nth-child(1)):not(:nth-child(4))::before {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 500px) {
     :root {
         font-size: 12px;
         --app-inline-padding: 1rem;
+    }
+
+    .gallery {
+        grid-template: repeat(6, 1fr) / repeat(1, 1fr);
+        --gap: 3rem;
+    }
+
+    .gallery div:not(:nth-child(1)):not(:nth-child(4))::before {
+        display: none;
     }
 }
