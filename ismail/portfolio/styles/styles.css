@@ -267,7 +267,7 @@ nav .adjustive {
 
 .avatar {
     height: 70vh;
-    filter: drop-shadow(0 0 100px var(--primary-color-transparent));
+    filter: drop-shadow(0 0 10rem var(--wh));
 }
 
 .heading {
@@ -306,7 +306,7 @@ nav .adjustive {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--gap);
-    --gap: 5rem;
+    --gap: 4rem;
     --line-offset: calc(var(--gap) / 2);
     --line-thickness: .12rem;
     --line-color: #3b4856;
@@ -319,7 +319,8 @@ nav .adjustive {
 }
 
 .gallery div img:hover {
-    transform: scale(1.1);
+    transform: scale(1.06);
+    box-shadow: 0 0 .4rem var(--primary-text-color);
 }
 
 .gallery div:not(:nth-child(1)):not(:nth-child(4))::before {
@@ -331,12 +332,12 @@ nav .adjustive {
     block-size: 30rem;
     inset-block-start: 0;
     inset-inline-start: calc(var(--line-offset) * -1);
-    margin-top: -6rem;
+    margin-top: -5rem;
 }
 
 .projects .container {
     margin: calc(var(--app-inline-padding) * 2);
-    padding: 5rem 3rem;
+    padding: 4rem 2rem;
     border-radius: 3rem;
     background: linear-gradient(172deg, rgba(28, 46, 58, 1) 47%, rgba(24, 69, 72, 1) 87%);
 }
@@ -352,7 +353,7 @@ nav .adjustive {
     height: 100%;
     object-fit: cover;
     width: 100%;
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.3s ease-in-out;
 }
 
 /*------------- main:temporary -------------*/
