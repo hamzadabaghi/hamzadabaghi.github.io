@@ -334,10 +334,10 @@ nav .adjustive {
     transform: translateY(-50%);
 }
 .container::after{
-    left: 34%;
+    left: 33.5%;
 }
 .container::before{
-    right: 34%;
+    right: 33.5%;
 }
 
 .projects .container {
