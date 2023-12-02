@@ -306,7 +306,7 @@ nav .adjustive {
     display: grid;
     grid-template: repeat(2, 1fr) / repeat(3, 1fr);
     gap: var(--gap);
-    --gap: 1.5rem;
+    --gap: 2rem;
 }
 
 .gallery img {
@@ -394,7 +394,6 @@ footer p {
     /* width: 100%; */
     height: 120%;
 }
-
 .round-circle {
     position: relative;
     border-radius: 50%;
