@@ -486,7 +486,7 @@ footer p {
     }
 
     .gallery {
-        grid-template: repeat(6, 1fr) / repeat(1, 1fr);
+        grid-template: 1fr;
         --gap: 3rem;
     }
 
