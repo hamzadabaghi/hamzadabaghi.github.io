@@ -320,8 +320,7 @@ nav .adjustive {
 }
 
 .gallery div img:hover {
-    transform: scale(1.06);
-    box-shadow: 0 0 .4rem var(--primary-text-color);
+    transform: scale(1.03);
 }
 
 .gallery div:not(:nth-child(1)):not(:nth-child(4))::before {
@@ -340,7 +339,7 @@ nav .adjustive {
     margin: calc(var(--app-inline-padding) * 2);
     padding: 4rem 2rem;
     border-radius: 3rem;
-    background: linear-gradient(172deg, rgba(28, 46, 58, 1) 47%, rgba(24, 69, 72, 1) 87%);
+    background: linear-gradient(172deg, rgba(28, 46, 58, .6) 47%, rgba(24, 69, 72, .6) 87%);
 }
 
 .projects .container h2 {
