@@ -42,7 +42,8 @@
 }
 
 html,body{
-    height: 100vh;
+    height: 100%;
+    width: 100vw;
 }
 body {
     background-color: var(--primary-bg-color);
@@ -230,7 +231,7 @@ nav .adjustive{
     padding-right: 1rem;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
 }
 .avatar{
     height: 70vh;
@@ -266,6 +267,14 @@ nav .adjustive{
     letter-spacing: .2rem;
 }
 
+/*------------utility-classes------------*/
+.two-columns{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: start;
+    gap: 2rem;
+    padding: 2rem;
+}
 /*------------media_queries-------------*/
 
 @media screen and (max-width: 1100px){
@@ -316,6 +325,9 @@ nav .adjustive{
     }
     .bg-path{
         display: none;
+    }
+    .two-columns{
+        grid-template-columns: 1fr;
     }
 }
 @media screen and (max-width: 500px){
