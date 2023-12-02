@@ -170,7 +170,7 @@ nav .adjustive {
 }
 
 .app-hireme-btn:hover {
-    background: var(--secondary-gradient);
+    background: var(--primary-gradient);
 }
 
 .app-hireme-btn:hover>.text {
@@ -179,7 +179,7 @@ nav .adjustive {
 }
 
 .app-hireme-btn>.text {
-    background: var(--secondary-gradient);
+    background: var(--primary-gradient);
     background-size: 150%;
     -webkit-background-clip: text;
     background-clip: text;
@@ -191,7 +191,7 @@ nav .adjustive {
     content: '';
     position: absolute;
     inset: calc(var(--_border-width) * -1);
-    background: var(--secondary-gradient);
+    background: var(--primary-gradient);
     z-index: -1;
     border-radius: calc(var(--_border-width) + var(--_radius));
 }
@@ -383,7 +383,7 @@ footer p {
     grid-template-columns: repeat(2, 1fr);
     align-items: start;
     gap: 2rem;
-    padding: 2rem;
+    padding-inline: var(--app-inline-padding);
     line-height: 1.6;
 }
 
@@ -395,17 +395,22 @@ footer p {
 .round-circle {
     position: relative;
     border-radius: 50%;
-    background: var(--secondary-gradient);
+    background: var(--primary-gradient);
     height: 400px;
     aspect-ratio: 1;
 }
 
 .clipper {
-    background: red;
+    padding-top: 5rem;
     width: fit-content;
-    /* mask-image: url(../assets/images/clipper.svg); */
-    /* -webkit-mask-image: url(../assets/images/clipper.svg); */
-    /* mask-position: bottom; */
+    mask-image: url(../assets/images/clipper.svg);
+    -webkit-mask-image: url(../assets/images/clipper.svg);
+    mask-position: center bottom;
+    -webkit-mask-position: center bottom;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-size: 109%;
+    -webkit-mask-size: 109%;
 }
 
 .round-circle img {
