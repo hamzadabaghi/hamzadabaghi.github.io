@@ -399,13 +399,16 @@ footer p {
     position: relative;
     border-radius: 50%;
     background: var(--primary-gradient);
-    height: 400px;
+    height: 100%;
+    /* width: 100%; */
     aspect-ratio: 1;
 }
-
+.app-hero .clipper{
+    margin-bottom: 2rem;
+}
 .clipper {
-    padding-top: 5rem;
-    width: fit-content;
+    padding-top: 10rem;
+    width: 80%;
     mask-image: url(../assets/images/clipper.svg);
     -webkit-mask-image: url(../assets/images/clipper.svg);
     mask-position: center bottom;
@@ -561,4 +564,27 @@ footer p {
     .gallery div:not(:nth-child(1)):not(:nth-child(4))::before {
         display: none;
     }
+}
+@media screen and (max-width: 1500px) {
+    :root {
+        --app-inline-padding: 2rem;
+    }
+    
+}
+
+/*----------scroll bar---------*/
+
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-gradient);
+    border-radius: 5px;
 }
