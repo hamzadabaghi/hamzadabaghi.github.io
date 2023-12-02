@@ -450,6 +450,7 @@ footer p {
     text-wrap: balance;
     color: #c7c3c3;
     padding: 0;
+    gap: 0;
 }
 
 .about-item-content span {
@@ -468,6 +469,7 @@ footer p {
 
 .about-item-content ul {
     padding: 0 2rem;
+    gap: 1rem;
 }
 
 /*------------media_queries-------------*/
