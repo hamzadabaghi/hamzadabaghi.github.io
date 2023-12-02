@@ -306,13 +306,12 @@ nav .adjustive {
     display: grid;
     grid-template: repeat(2, 1fr) / repeat(3, 1fr);
     gap: var(--gap);
-    --gap: 4rem;
-    --line-offset: calc(var(--gap) / 2);
-    --line-thickness: .1rem;
-    --line-color: #3b4856;
+    --gap: 1.5rem;
 }
 
-
+.gallery img{
+   aspect-ratio: 16 / 9;
+}
 .gallery div {
     position: relative;
     height: inherit;
@@ -323,21 +322,31 @@ nav .adjustive {
     transform: scale(1.03);
 }
 
-.gallery div:not(:nth-child(1)):not(:nth-child(4))::before {
+.container::before ,.container::after {
     content: '';
     position: absolute;
-    background-color: var(--line-color);
+    top: 50%;
+    /* background-color: var(--line-color); */
+    background: linear-gradient(transparent 15%,var(--line-color) ,transparent 85%);
     z-index: 1;
     width: var(--line-thickness);
-    block-size: calc(var(--div-height) * 1.3);
-    inset-block-start: 0;
-    inset-inline-start: calc(var(--line-offset) * -1);
-    margin-top: -5rem;
+    height: calc(100% - 4rem);
+    transform: translateY(-50%);
+}
+.container::after{
+    left: 34%;
+}
+.container::before{
+    right: 34%;
 }
 
 .projects .container {
+    --line-thickness : .2rem;
+    --line-offset: calc(var(--gap) / 2);
+    --line-color: #ffffff30;
+    position: relative;
     padding: 4rem 2rem;
-    border-radius: 1rem;
+    border-radius: .5rem;
     background: linear-gradient(172deg, rgba(28, 46, 58, .6) 47%, rgba(24, 69, 72, .6) 87%);
 }
 
@@ -360,6 +369,7 @@ nav .adjustive {
 .about,
 .contact,
 .skills,
+.projects,
 footer p {
     text-align: center;
     padding-inline: var(--app-inline-padding);
