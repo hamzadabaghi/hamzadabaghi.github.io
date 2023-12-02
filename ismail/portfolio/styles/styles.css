@@ -336,7 +336,6 @@ nav .adjustive {
 }
 
 .projects .container {
-    margin: calc(var(--app-inline-padding));
     padding: 4rem 2rem;
     border-radius: 1rem;
     background: linear-gradient(172deg, rgba(28, 46, 58, .6) 47%, rgba(24, 69, 72, .6) 87%);
@@ -363,6 +362,7 @@ nav .adjustive {
 .skills,
 footer p {
     text-align: center;
+    padding-inline: var(--app-inline-padding);
 }
 
 
@@ -389,12 +389,9 @@ footer p {
 .clipper{
     background: red;
     width: fit-content;
-    mask-image: url(../assets/images/clipper.svg);
-    -webkit-mask-image: url(../assets/images/clipper.svg);
+    /* mask-image: url(../assets/images/clipper.svg); */
+    /* -webkit-mask-image: url(../assets/images/clipper.svg); */
     /* mask-position: bottom; */
-    mask-repeat: no-repeat;
-    /* -webkit-mask-position: bottom; */
-    -webkit-mask-repeat: no-repeat;
 }
 .round-circle img{
     position: absolute;
@@ -485,7 +482,7 @@ footer p {
     }
 
     .gallery {
-        grid-template: 1fr;
+        grid-template-columns: 1fr;
         --gap: 3rem;
     }
 
