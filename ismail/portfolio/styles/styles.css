@@ -404,6 +404,7 @@ footer p {
 }
 .app-hero .clipper{
     margin-bottom: 2rem;
+    /* max-height: 100%; */
 }
 .clipper {
     padding-top: 10rem;
