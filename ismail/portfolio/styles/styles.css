@@ -452,7 +452,7 @@ footer p {
 .about-item-title {
     font-size: calc(var(--fs-md));
     font-weight: 600;
-    background: var(--secondary-gradient);
+    background: var(--primary-gradient);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -571,8 +571,8 @@ footer p {
     }
 
     .app-hero {
-        margin-top: 6rem;
-        margin-bottom: 10rem;
+        padding-top: 6rem;
+        padding-bottom: 14rem;
     }
 
     .gallery {
