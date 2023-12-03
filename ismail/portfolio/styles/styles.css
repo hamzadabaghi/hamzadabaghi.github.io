@@ -370,15 +370,19 @@ nav .adjustive {
 
 /*------------- main:common -------------*/
 
-.about,
 .contact,
 .skills,
 .projects,
+.contact,
 footer p {
     text-align: center;
     padding-inline: var(--app-inline-padding);
+    padding-top: 4rem;
 }
 
+#about {
+    padding-top: 4rem;
+}
 
 /*------------utility-classes------------*/
 .two-columns {
@@ -394,6 +398,7 @@ footer p {
 .img {
     height: 120%;
 }
+
 .round-circle {
     position: relative;
     border-radius: 50%;
@@ -565,6 +570,11 @@ footer p {
         --app-inline-padding: 1rem;
     }
 
+    .app-hero {
+        margin-top: 6rem;
+        margin-bottom: 10rem;
+    }
+
     .gallery {
         grid-template-columns: 1fr;
         --gap: 3rem;
@@ -572,6 +582,38 @@ footer p {
 
     .gallery div:not(:nth-child(1)):not(:nth-child(4))::before {
         display: none;
+    }
+
+    #about .clipper {
+        padding-top: 4rem;
+        width: 100%;
+    }
+
+    .about-items {
+        align-items: center;
+    }
+
+    .about-item-title {
+        text-align: center;
+    }
+
+    .about-item-content ul {
+        padding: 0 2rem;
+        gap: 1rem;
+    }
+
+    .about-items>div:nth-child(2) .about-item-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-items>div:nth-child(1) .about-item-content {
+        text-align: center;
+    }
+
+    .about-items>div:nth-child(3) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
 
