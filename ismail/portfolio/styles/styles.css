@@ -19,6 +19,7 @@
     --primary-color-transparent: #00f06030;
     --secondary-color: #0686ce;
     --primary-gradient: linear-gradient(120deg, #0686ce, #00f060);
+    --primary-gradient-with-opacity: linear-gradient(120deg, #0685cea9, #00f06099);
     --secondary-gradient: linear-gradient(90deg, #68fff9, #45ff0a, #45ff0a);
     --secondary-color-dark: #0167a1;
     --primary-font-stack: 'Poppins', sans-serif;
@@ -237,8 +238,7 @@ nav .adjustive {
     display: grid;
     grid-template-columns: 60% 40%;
     align-items: center;
-    padding: calc(var(--app-inline-padding));
-    margin-bottom: 10rem;
+    padding: 0 calc(var(--app-inline-padding));
 }
 
 .bg-path {
@@ -368,17 +368,21 @@ nav .adjustive {
     transition: transform 0.3s ease-in-out;
 }
 
-/*------------- main:temporary -------------*/
+/*------------- main:common -------------*/
 
-.about,
 .contact,
 .skills,
 .projects,
+.contact,
 footer p {
     text-align: center;
     padding-inline: var(--app-inline-padding);
+    padding-top: 4rem;
 }
 
+#about {
+    padding-top: 4rem;
+}
 
 /*------------utility-classes------------*/
 .two-columns {
@@ -390,22 +394,33 @@ footer p {
     line-height: 1.6;
 }
 
+
 .img {
-    /* width: 100%; */
     height: 120%;
 }
+
 .round-circle {
     position: relative;
     border-radius: 50%;
-    background: var(--primary-gradient);
+    background: var(--primary-gradient-with-opacity);
     height: 100%;
     /* width: 100%; */
     aspect-ratio: 1;
 }
-.app-hero .clipper{
+
+.app-hero .clipper {
     margin-bottom: 2rem;
     /* max-height: 100%; */
 }
+
+#about {
+    justify-items: center;
+}
+
+#about>div:first-child {
+    width: 78%;
+}
+
 .clipper {
     padding-top: 10rem;
     width: 80%;
@@ -435,14 +450,10 @@ footer p {
     height: 100%;
 }
 
-.about-item {
-    flex: 1;
-}
-
 .about-item-title {
     font-size: calc(var(--fs-md));
     font-weight: 600;
-    background: var(--secondary-gradient);
+    background: var(--primary-gradient);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -473,6 +484,10 @@ footer p {
 .about-item-content ul {
     padding: 0 2rem;
     gap: 1rem;
+}
+
+.about-item {
+    flex: 1;
 }
 
 /*------------media_queries-------------*/
@@ -548,12 +563,22 @@ footer p {
     .gallery div:not(:nth-child(1)):not(:nth-child(4))::before {
         display: none;
     }
+
+    .container::before,
+    .container::after {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 500px) {
     :root {
         font-size: 12px;
         --app-inline-padding: 1rem;
+    }
+
+    .app-hero {
+        padding-top: 13rem;
+        padding-bottom: 14rem;
     }
 
     .gallery {
@@ -564,12 +589,51 @@ footer p {
     .gallery div:not(:nth-child(1)):not(:nth-child(4))::before {
         display: none;
     }
+
+    #about .clipper {
+        padding-top: 4rem;
+        width: 100%;
+    }
+
+    .about-items {
+        align-items: center;
+    }
+
+    .about-item-title {
+        text-align: center;
+    }
+
+    .about-item-content ul {
+        padding: 0 2rem;
+        gap: 1rem;
+    }
+
+    .about-items>div:nth-child(2) .about-item-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-items>div:nth-child(1) .about-item-content {
+        text-align: center;
+    }
+
+    .about-items>div:nth-child(3) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .container::before,
+    .container::after {
+        display: none;
+    }
 }
+
 @media screen and (max-width: 1500px) {
     :root {
         --app-inline-padding: 2rem;
     }
-    
+
 }
 
 /*----------scroll bar---------*/
