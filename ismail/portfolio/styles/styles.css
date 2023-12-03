@@ -562,6 +562,11 @@ footer p {
     .gallery div:not(:nth-child(1)):not(:nth-child(4))::before {
         display: none;
     }
+
+    .container::before,
+    .container::after {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -614,6 +619,12 @@ footer p {
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+
+    .container::before,
+    .container::after {
+        display: none;
     }
 }
 
