@@ -234,7 +234,7 @@ nav .adjustive {
 
 /*------------- main:hero -------------*/
 .app-hero {
-    position: relative;
+    min-height: calc(100vh - var(--navbar-height));
     display: grid;
     grid-template-columns: 60% 40%;
     align-items: center;
@@ -345,9 +345,9 @@ nav .adjustive {
 }
 
 .projects .container {
-    --line-thickness: .2rem;
+    --line-thickness: .1rem;
     --line-offset: calc(var(--gap) / 2);
-    --line-color: #ffffff30;
+    --line-color: #cffff420;
     position: relative;
     padding: 4rem 2rem;
     border-radius: .5rem;
@@ -410,7 +410,9 @@ footer p {
 
 .app-hero .clipper {
     margin-bottom: 2rem;
-    /* max-height: 100%; */
+    min-width: 500px;
+    margin-top: var(--navbar-height);
+    z-index: -1;
 }
 
 #about {
@@ -502,7 +504,6 @@ footer p {
     }
 
     .app-hero {
-        position: relative;
         z-index: -1;
         grid-template-columns: 1fr;
     }
@@ -533,7 +534,6 @@ footer p {
         position: absolute;
         inset: 0;
         z-index: -1;
-        filter: blur(20px);
         background: linear-gradient(90deg,
                 var(--primary-bg-color),
                 var(--primary-bg-color-transparent), transparent);
@@ -563,7 +563,9 @@ footer p {
     .gallery div:not(:nth-child(1)):not(:nth-child(4))::before {
         display: none;
     }
-
+    .app-hero .clipper{
+        max-width: 60%;
+    }
     .container::before,
     .container::after {
         display: none;
