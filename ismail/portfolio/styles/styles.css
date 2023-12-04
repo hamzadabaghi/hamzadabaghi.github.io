@@ -246,9 +246,9 @@ nav .adjustive {
     inset: 0;
     z-index: -1;
     left: 0;
-    transform: translateY(-20%) scaleX(1.2);
+    transform: translateY(10%);
     object-fit: cover;
-    opacity: .15;
+    opacity: .05;
 }
 
 .app-hero .column-1 {
@@ -409,7 +409,7 @@ footer p {
 }
 
 .app-hero .clipper {
-    margin-bottom: 2rem;
+    margin-bottom: 10rem;
     min-width: 500px;
     margin-top: var(--navbar-height);
     z-index: -1;
@@ -565,6 +565,7 @@ footer p {
     }
     .app-hero .clipper{
         max-width: 60%;
+        margin-bottom: 0;
     }
     .container::before,
     .container::after {
