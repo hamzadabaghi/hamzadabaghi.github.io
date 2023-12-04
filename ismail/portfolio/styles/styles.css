@@ -513,9 +513,12 @@ footer{
 }
 
 .about-item-content {
+    display: flex;
     text-wrap: balance;
     color: #c7c3c3;
-    padding: 0;
+    padding-inline: 1rem;
+    margin-block: 1rem;
+    border-left: 3px solid var(--primary-color-80);
     gap: 0;
 }
 
@@ -537,12 +540,18 @@ footer{
     padding: 0 2rem;
     gap: 1rem;
 }
+.about-item-content li {
+    line-height: 3rem;
+}
 
 .about-item {
     flex: 1;
 }
 .user-competence li::marker{
     content: "🚀  ";
+}
+.user-competence{
+    padding: 0;
 }
 /*------------media_queries-------------*/
 
@@ -637,6 +646,53 @@ footer{
         width: 100%;
         padding-inline: 2rem;
     }
+    .bg-path-2{
+        top: 30%;
+        transform: translateY(-50%);
+    }
+    #about .clipper {
+        padding-top: 10rem;
+        width: 100%;
+    }
+
+    .about-item {
+        align-items: center;
+        text-align: center;
+    }
+    .about-item ul{
+        /* width: fit-content; */
+    }
+    .about-item-content{
+        justify-content: center;
+        width: 100%;
+        border-right: 3px solid var(--primary-color-80);
+    }
+    .about-item-title {
+        text-align: center;
+    }
+
+    .about-item-content ul {
+        padding: 0 2rem;
+        gap: 1rem;
+    }
+
+    .about-items>div:nth-child(2) .about-item-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-items>div:nth-child(1) .about-item-content {
+        text-align: center;
+    }
+
+    .about-items>div:nth-child(3) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .user-competence{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
 }
 
 @media screen and (max-width: 500px) {
@@ -662,42 +718,12 @@ footer{
         display: none;
     }
 
-    #about .clipper {
-        padding-top: 4rem;
-        width: 100%;
-    }
-
-    .about-items {
-        align-items: center;
-    }
-
-    .about-item-title {
-        text-align: center;
-    }
-
-    .about-item-content ul {
-        padding: 0 2rem;
-        gap: 1rem;
-    }
-
-    .about-items>div:nth-child(2) .about-item-content {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .about-items>div:nth-child(1) .about-item-content {
-        text-align: center;
-    }
-
-    .about-items>div:nth-child(3) {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-
     .container::before,
     .container::after {
         display: none;
+    }
+    .user-competence{
+        grid-template-columns: 1fr;
     }
 }
 
