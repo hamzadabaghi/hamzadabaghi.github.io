@@ -98,6 +98,7 @@ a:hover {
     all: unset;
     display: flex;
     align-items: center;
+    justify-content: center;
     width: fit-content;
     gap: .7rem;
     text-decoration: none;
@@ -314,6 +315,25 @@ section#about{
 
 /*------------- main:projects -------------*/
 
+.project-container{
+    position: relative;
+}
+.project-container:hover .project-info{
+    opacity: 1;
+}
+.project-info {
+    opacity: 0;
+    transition: opacity var(--app-transitions-duration);
+    position: absolute !important;
+    background: #1a1a1a80;
+    backdrop-filter: blur(10px);
+    border-radius: .5rem;
+    inset: 0;
+    z-index: 10;
+    padding: 1rem;
+    display: grid;
+    place-content: center;
+}
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -337,26 +357,6 @@ section#about{
     transform: scale(1.03);
 }
 
-.container::before,
-.container::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    background: linear-gradient(transparent 8%, var(--line-color), transparent 100%);
-    z-index: 1;
-    width: var(--line-thickness);
-    height: calc(100% - 4rem);
-    transform: translateY(-50%);
-}
-
-.container::after {
-    left: 33.5%;
-}
-
-.container::before {
-    right: 33.5%;
-}
-
 .projects .container {
     --line-thickness: .1rem;
     --line-offset: calc(var(--gap) / 2);
@@ -369,11 +369,11 @@ section#about{
     background: conic-gradient(from 30deg at 50% 50%, var(--primary-color-transparent), var(--secondary-color-transparent),var(--secondary-color-transparent), var(--primary-color-transparent));
 }
 .projects .container .gradient-border{
-   position: absolute;
-   inset: 0;
-   z-index: -1;
-   border-radius: var(--_radius);
-   background: conic-gradient(from 50deg at 50% 50%, var(--primary-color), var(--secondary-color),var(--secondary-color), #00f060);
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: var(--_radius);
+    background: conic-gradient(from 50deg at 50% 50%, var(--primary-color), var(--secondary-color),var(--secondary-color), #00f060);
 }
 .projects .container .gradient-border::after{
     content: '';
@@ -382,6 +382,11 @@ section#about{
     border-radius: var(--_radius);
     background: var(--primary-bg-color);
     opacity: .8;
+}
+.projects .container .link-placeholder{
+    padding: 3rem 0 0;
+    display: flex;
+    justify-content: center;
 }
 
 .projects .container h2 {
@@ -647,10 +652,6 @@ footer{
         max-width: 60%;
         margin-bottom: 0;
     }
-    .container::before,
-    .container::after {
-        display: none;
-    }
     .stats-placeholder{
         flex-direction: column;
         gap: 1rem;
@@ -735,12 +736,11 @@ footer{
         display: none;
     }
 
-    .container::before,
-    .container::after {
-        display: none;
-    }
     .user-competence{
         grid-template-columns: 1fr;
+    }
+    .projects .container .link-placeholder a{
+        width: 100%;
     }
 
 }
