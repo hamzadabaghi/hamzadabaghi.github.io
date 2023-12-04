@@ -280,10 +280,6 @@ section#about{
     justify-content: flex-end;
 }
 
-.avatar {
-    height: 70vh;
-    filter: drop-shadow(0 0 10rem var(--wh));
-}
 
 .heading {
     font-size: var(--fs-md);
@@ -453,9 +449,7 @@ section#about{
 }
 
 .app-hero .clipper {
-    margin-bottom: 10rem;
     min-width: 500px;
-    margin-top: var(--navbar-height);
 }
 .shadow{
    filter: drop-shadow(-20px -80px 100px var(--primary-color-transparent));
@@ -621,6 +615,7 @@ section#about{
         display: flex;
         align-items: center;
         justify-content: flex-end;
+    
     }
 
     .app-hero .column-2 .avatar {
