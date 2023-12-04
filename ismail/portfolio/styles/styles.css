@@ -380,7 +380,7 @@ section#about{
     inset: 0;
     z-index: -1;
     border-radius: var(--_radius);
-    background: conic-gradient(from 50deg at 50% 50%, var(--primary-color), var(--secondary-color),var(--secondary-color), #00f060);
+    background: conic-gradient(from 50deg at 50% 50%, var(--primary-color), var(--secondary-color),var(--secondary-color), var(--primary-color));
 }
 .projects .container .gradient-border::after{
     content: '';
@@ -417,7 +417,7 @@ section#about{
 .projects,
 .contact,
 .stats,
-footer{
+.app-footer {
     text-align: center;
     padding-inline: var(--app-inline-padding);
     padding-top: 4rem;
@@ -589,6 +589,13 @@ footer{
 }
 .user-competence{
     padding: 0;
+}
+/*---------------- footer --------------*/
+.app-footer{
+    background: var(--primary-color-transparent);
+    padding: 2rem var(--app-inline-padding);
+    border-top: 3px solid var(--primary-color);
+    box-shadow: 0 0 100px var(--primary-color-transparent);
 }
 /*------------media_queries-------------*/
 
