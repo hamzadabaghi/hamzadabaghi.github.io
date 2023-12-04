@@ -19,6 +19,7 @@
     --primary-color-80: #00f06080;
     --primary-color-transparent: #00f06030;
     --secondary-color: #0686ce;
+    --secondary-color-transparent: #0686ce30;
     --primary-gradient: linear-gradient(120deg, #0686ce, #00f060);
     --primary-gradient-with-opacity: linear-gradient(120deg, #0685cea9, #00f06099);
     --secondary-gradient: linear-gradient(90deg, #68fff9, #45ff0a, #45ff0a);
@@ -315,12 +316,14 @@ section#about{
 
 .gallery {
     display: grid;
-    grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: var(--gap);
     --gap: 2rem;
 }
 
 .gallery img {
+    width: 100%;
+    max-width: 100vw;
     aspect-ratio: 16 / 9;
 }
 
@@ -339,7 +342,6 @@ section#about{
     content: '';
     position: absolute;
     top: 50%;
-    /* background-color: var(--line-color); */
     background: linear-gradient(transparent 8%, var(--line-color), transparent 100%);
     z-index: 1;
     width: var(--line-thickness);
@@ -359,10 +361,27 @@ section#about{
     --line-thickness: .1rem;
     --line-offset: calc(var(--gap) / 2);
     --line-color: #cffff420;
+    --_radius: .5rem;
     position: relative;
     padding: 4rem 2rem;
-    border-radius: .5rem;
-    background: linear-gradient(172deg, rgba(28, 46, 58, .6) 47%, rgba(24, 69, 72, .6) 87%);
+    border-radius: var(--_radius);
+    /* background: linear-gradient(172deg, rgba(28, 46, 58, .6) 47%, rgba(24, 69, 72, .6) 87%); */
+    background: conic-gradient(from 30deg at 50% 50%, var(--primary-color-transparent), var(--secondary-color-transparent),var(--secondary-color-transparent), var(--primary-color-transparent));
+}
+.projects .container .gradient-border{
+   position: absolute;
+   inset: 0;
+   z-index: -1;
+   border-radius: var(--_radius);
+   background: conic-gradient(from 50deg at 50% 50%, var(--primary-color), var(--secondary-color),var(--secondary-color), #00f060);
+}
+.projects .container .gradient-border::after{
+    content: '';
+    position: absolute;
+    inset: 4px;
+    border-radius: var(--_radius);
+    background: var(--primary-bg-color);
+    opacity: .8;
 }
 
 .projects .container h2 {
@@ -425,8 +444,14 @@ footer{
     margin-bottom: 10rem;
     min-width: 500px;
     margin-top: var(--navbar-height);
+}
+.shadow{
+   filter: drop-shadow(-20px -80px 100px var(--primary-color-transparent));
+}
+.app-hero .shadow{
     z-index: -1;
 }
+
 
 #about {
     justify-items: center;
@@ -464,7 +489,7 @@ footer{
     justify-content: center;
     gap: 3rem;
     padding: 1rem;
-    border-bottom: 1px solid var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
     box-shadow: 20px 80px 1000px var(--primary-color-transparent), -20px -80px 1000px var(--primary-color-transparent);
 }
 .stats-placeholder .arrows{
@@ -615,12 +640,6 @@ footer{
     .two-columns {
         grid-template-columns: 1fr;
     }
-
-    .gallery {
-        grid-template: repeat(3, 1fr) / repeat(2, 1fr);
-        --gap: 2rem;
-    }
-
     .gallery div:not(:nth-child(1)):not(:nth-child(4))::before {
         display: none;
     }
@@ -711,9 +730,7 @@ footer{
 
     .gallery {
         grid-template-columns: 1fr;
-        --gap: 3rem;
     }
-
     .gallery div:not(:nth-child(1)):not(:nth-child(4))::before {
         display: none;
     }
@@ -725,6 +742,7 @@ footer{
     .user-competence{
         grid-template-columns: 1fr;
     }
+
 }
 
 @media screen and (max-width: 1500px) {
@@ -750,3 +768,6 @@ footer{
     background: var(--primary-gradient);
     border-radius: 5px;
 }
+
+/* ---------------keyframes------------------ */
+
