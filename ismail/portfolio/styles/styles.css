@@ -242,14 +242,23 @@ nav .adjustive {
     align-items: center;
     padding: 0 calc(var(--app-inline-padding));
 }
-
+section#about{
+    position: relative;
+}
 .bg-path {
     position: absolute;
     inset: 0;
     z-index: -1;
     left: 0;
     transform: translateY(10%);
-    object-fit: cover;
+    opacity: .05;
+}
+.bg-path-2 {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    left: 0;
+    transform: translateY(10%) rotate(.5turn);
     opacity: .05;
 }
 
@@ -385,6 +394,7 @@ footer{
 
 #about {
     padding-top: 4rem;
+    margin-block: 10rem;
 }
 
 /*------------utility-classes------------*/
@@ -398,7 +408,7 @@ footer{
 }
 
 
-.img {
+.round-circle .img {
     height: 120%;
 }
 
@@ -531,7 +541,9 @@ footer{
 .about-item {
     flex: 1;
 }
-
+.user-competence li::marker{
+    content: "🚀  ";
+}
 /*------------media_queries-------------*/
 
 @media screen and (max-width: 1100px) {
