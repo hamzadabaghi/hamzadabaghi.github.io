@@ -425,6 +425,27 @@ section#about{
 }
 
 /*------------utility-classes------------*/
+
+.gototop{
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 1000;
+    background: var(--primary-color);
+    padding: .5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background var(--app-transitions-duration) , transform var(--app-transitions-duration);
+}
+.gototop span{
+    transition: color var(--app-transitions-duration);
+}
+a.gototop:hover{
+    background: var(--primary-color);
+    -webkit-background-clip: none;
+    background-clip: none;
+    color: var(--primary-bg-color);
+}
 .two-columns {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -466,7 +487,6 @@ section#about{
 #about>div:first-child {
     width: 78%;
 }
-
 .clipper {
     padding-top: 10rem;
     width: 80%;
