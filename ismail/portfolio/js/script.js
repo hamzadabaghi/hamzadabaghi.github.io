@@ -15,7 +15,7 @@ navPhoneMenuContainer.querySelector(".app-brand").addEventListener('click', () =
 });
 
 window.addEventListener('scroll', () => {
-    if (window.scrollY >= window.innerHeight * 1.5) {
+    if (window.scrollY >= window.innerHeight * 1.3) {
         goToTopBtn.style.transform = 'translateY(0)';
     } else {
         goToTopBtn.style.transform = 'translateY(100vh)';
