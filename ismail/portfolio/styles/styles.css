@@ -867,10 +867,6 @@ a.gototop:hover {
         text-align: center;
     }
 
-    .about-item ul {
-        /* width: fit-content; */
-    }
-
     .about-item-content {
         justify-content: center;
         width: 100%;
