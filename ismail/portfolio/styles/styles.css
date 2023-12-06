@@ -665,30 +665,24 @@ a.gototop:hover {
 
 .skills .container .second-flex {
     display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-    /* justify-content: center; */
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: stretch;
     gap: 2rem;
-    background: blue;
 }
 
 .second-flex .skill-container img {
     max-width: 5rem;
-    flex-grow: 1;
     aspect-ratio: 1;
+    width: 5rem;
+}
+.skill-container{
     background: #0000002e;
     border: 0.5px solid rgb(181 181 181);
     box-shadow: rgb(255 255 255 / 25%) 0px 30px 60px -12px inset, rgb(15 255 0 / 59%) 0px 18px 36px -18px inset;
     padding: 0.8rem;
     border-radius: 1.4rem;
-}
-.skill-container{
-    display: flex;
-    max-height: 7rem;
-    align-items: center;
-    gap: 2rem;
-    width: 100%;
-    background: red;
+    flex-grow: 1;
 }
 /*---------------- contact --------------*/
 .center {
