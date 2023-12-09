@@ -113,7 +113,6 @@ a:hover {
 
 .btn:hover {
     color: var(--secondary-text-color);
-    border: .1rem solid var(--primary-color);
     background: var(--primary-gradient-with-opacity);
 }
 
