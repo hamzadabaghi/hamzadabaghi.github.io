@@ -667,24 +667,25 @@ a.gototop:hover {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: stretch;
+    justify-content: center;
+    justify-items: center;
     gap: 2rem;
 }
 
 .second-flex .skill-container img {
     max-width: 5rem;
     aspect-ratio: 1;
-    width: 5rem;
+    width: 4rem;
 }
-.skill-container{
+
+.skill-container {
     background: #0000002e;
     border: 0.5px solid rgb(181 181 181);
     box-shadow: rgb(255 255 255 / 25%) 0px 30px 60px -12px inset, rgb(15 255 0 / 59%) 0px 18px 36px -18px inset;
     padding: 0.8rem;
     border-radius: 1.4rem;
-    flex-grow: 1;
-    max-width: 17rem;
 }
+
 /*---------------- contact --------------*/
 .center {
     width: 100%;
@@ -706,7 +707,6 @@ a.gototop:hover {
 
 #social-media .social {
     position: relative;
-    width: 100%;
     max-width: 70vw;
     padding-left: 0px;
     display: flex;
@@ -714,6 +714,7 @@ a.gototop:hover {
     justify-content: center;
     gap: 2rem;
 }
+
 #social-media .social::before {
     content: '';
     position: absolute;
@@ -733,23 +734,24 @@ a.gototop:hover {
     width: 100px;
     height: 100px;
     border: 1px solid rgba(167, 146, 129, 0.4);
-    transition:all var(--app-transitions-duration);
+    transition: all var(--app-transitions-duration);
     cursor: pointer !important;
     border-radius: 1rem;
 }
 
-.social > li:hover {
+.social>li:hover {
     border: none;
     color: white !important;
     opacity: 1;
     background: var(--h-clr);
 }
-.social:hover > li:not(:hover) {
+
+.social:hover>li:not(:hover) {
     opacity: .5;
 }
 
 
-.social li.github:hover{
+.social li.github:hover {
     border: none;
     color: #171515 !important;
 }
@@ -954,16 +956,18 @@ a.gototop:hover {
     }
 
     .second-flex .skill-container img {
-        width: 6rem;
+        width: 5rem;
     }
-    .skills .skill-container{
-        width: 100%;
+
+    .skills .skill-container {
+        width: 80%;
     }
+
     .skills .container .second-flex {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
 
 }
 
