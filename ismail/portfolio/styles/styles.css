@@ -32,7 +32,7 @@
     --tablet-max-width: 102.3rem;
     --desktop-width: 102.4rem;
     --app-inline-padding: 7rem;
-    --app-transitions-duration: 300ms;
+    --app-transitions-duration: 350ms;
     --navbar-height: 6rem;
     --fs-sm: .7rem;
     --fs-normale: 1rem;
@@ -420,7 +420,6 @@ section#about {
 
 /*------------- main:common -------------*/
 
-.contact,
 .skills,
 .projects,
 .contact,
@@ -636,12 +635,13 @@ a.gototop:hover {
 .skills .container {
     display: flex;
     flex-direction: column;
-    gap: 4rem;
+    gap: 2rem;
     padding: 3rem;
     background-color: var(--skills-bg-color);
     border: 3px dashed var(--primary-color-80);
     border-radius: 1rem;
     opacity: 0.8;
+    height: 100%;
 }
 
 .skills .container .first-flex {
@@ -665,26 +665,26 @@ a.gototop:hover {
 
 .skills .container .second-flex {
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-wrap: wrap;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+    align-items: center;
+    justify-content: stretch;
     gap: 2rem;
-    justify-items: center;
 }
 
-.second-flex span img {
-    width: 5rem;
-    flex-grow: 1;
+.second-flex .skill-container img {
+    max-width: 5rem;
     aspect-ratio: 1;
+    width: 5rem;
+}
+.skill-container{
     background: #0000002e;
     border: 0.5px solid rgb(181 181 181);
     box-shadow: rgb(255 255 255 / 25%) 0px 30px 60px -12px inset, rgb(15 255 0 / 59%) 0px 18px 36px -18px inset;
     padding: 0.8rem;
     border-radius: 1.4rem;
+    flex-grow: 1;
+    max-width: 17rem;
 }
-
 /*---------------- contact --------------*/
 .center {
     width: 100%;
@@ -692,7 +692,8 @@ a.gototop:hover {
 
 #social-media {
     padding: 4rem 0;
-    vertical-align: middle;
+    display: flex;
+    justify-content: center;
     text-align: center;
     font-size: 60px;
 }
@@ -704,69 +705,53 @@ a.gototop:hover {
 }
 
 #social-media .social {
+    position: relative;
+    width: 100%;
+    max-width: 70vw;
     padding-left: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+#social-media .social::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    filter: blur(150px);
+    z-index: -1;
+    background: var(--primary-color-transparent);
 }
 
 #social-media li {
-    color: rgba(167, 146, 129, 0.6);
-    list-style-type: none;
-    display: inline-block;
-    width: 100px;
-    height: 100px;
-    line-height: 50px;
-    border: 1px solid rgba(167, 146, 129, 0.4);
-    cursor: pointer;
-    transition: ease 0.3s;
-    border-radius: 1rem;
-    margin: 0 1rem;
-}
-
-
-.social:hover>li {
-    opacity: 0.5;
-}
-
-.social:hover>li:hover {
-    opacity: 1;
-}
-
-.smi {
     display: flex !important;
     align-items: center;
     justify-content: center;
-    height: inherit;
+    flex-grow: 1;
+    color: rgba(167, 146, 129, 0.6);
+    list-style-type: none;
+    width: 100px;
+    height: 100px;
+    border: 1px solid rgba(167, 146, 129, 0.4);
+    transition:all var(--app-transitions-duration);
+    cursor: pointer !important;
+    border-radius: 1rem;
 }
 
-#social-media li:nth-child(1):hover {
-    color: #4267B2;
-    filter: drop-shadow(0 0 2px #888686);
-    border: 1px solid #a79281;
+.social > li:hover {
+    border: none;
+    color: white !important;
+    opacity: 1;
+    background: var(--h-clr);
 }
-
-#social-media li:nth-child(2):hover {
-    color: #1da1f2;
-    filter: drop-shadow(0 0 2px #888686);
-    border: 1px solid #a79281;
-}
-
-#social-media li:nth-child(3):hover {
-    color: #cd486b;
-    filter: drop-shadow(0 0 2px #888686);
-    border: 1px solid #a79281;
-}
-
-#social-media li:nth-child(4):hover {
-    color: #171515;
-    filter: drop-shadow(0 0 2px #888686);
-    border: 1px solid #a79281;
+.social:hover > li:not(:hover) {
+    opacity: .5;
 }
 
 
-
-#social-media li:nth-child(5):hover {
-    color: #0077b5;
-    filter: drop-shadow(0 0 2px #888686);
-    border: 1px solid #a79281;
+.social li.github:hover{
+    border: none;
+    color: #171515 !important;
 }
 
 /*---------------- footer --------------*/
@@ -882,10 +867,6 @@ a.gototop:hover {
         text-align: center;
     }
 
-    .about-item ul {
-        /* width: fit-content; */
-    }
-
     .about-item-content {
         justify-content: center;
         width: 100%;
@@ -969,12 +950,20 @@ a.gototop:hover {
     .skills .container .second-flex {
         display: flex;
         flex-direction: column;
-        gap: 3rem;
+        gap: 2rem;
     }
 
-    .second-flex span img {
+    .second-flex .skill-container img {
         width: 6rem;
     }
+    .skills .skill-container{
+        width: 100%;
+    }
+    .skills .container .second-flex {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
 
 }
 
