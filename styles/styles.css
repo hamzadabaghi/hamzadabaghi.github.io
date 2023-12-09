@@ -684,7 +684,7 @@ a.gototop:hover {
 .skill-container {
     background: #0000002e;
     border: 0.5px solid rgb(181 181 181);
-    box-shadow: rgb(255 255 255 / 25%) 0px 30px 60px -12px inset, rgb(15 255 0 / 59%) 0px 18px 36px -18px inset;
+    box-shadow: rgb(255 255 255 / 25%) 0px 30px 60px -12px inset, rgba(255, 217, 0, 0.59) 0px 18px 36px -18px inset;
     padding: 0.8rem;
     border-radius: 1.4rem;
 }
