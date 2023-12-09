@@ -258,7 +258,7 @@ section#about {
     z-index: -1;
     left: 0;
     transform: translateY(20%);
-    opacity: .15;
+    opacity: .4;
     filter: blur(1px);
 }
 
@@ -268,7 +268,7 @@ section#about {
     z-index: -1;
     left: 0;
     transform: translateY(10%) rotate(.5turn);
-    opacity: .15;
+    opacity: .4;
     filter: blur(1px);
 }
 
