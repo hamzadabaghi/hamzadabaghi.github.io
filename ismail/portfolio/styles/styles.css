@@ -10,20 +10,20 @@
     font-style: normal;
 }
 
+/* #d6e833 : yellow, rgba(214,232,51,255): black, darkYellow : #d2e730, moreDarkYelow: rgba(210,231,48,255) */
 :root {
-    --primary-bg-color: #151f2c;
+    --primary-bg-color: #010710fb;
     --primary-bg-color-transparent: #151f2c99;
     --secondary-bg-color: #194548;
     --primary-text-color: #fefefe;
-    --primary-color: #00f060;
-    --primary-color-80: #00f06080;
-    --primary-color-transparent: #00f06030;
-    --secondary-color: #0686ce;
+    --secondary-text-color: #0e1111;
+    --primary-color: #d6e833;
+    --primary-color-80: rgba(21, 255, 115, 0.235);
+    --primary-color-transparent: #d6e8333a;
+    --secondary-color: #d2e730;
     --secondary-color-transparent: #0686ce30;
-    --primary-gradient: linear-gradient(120deg, #0686ce, #00f060);
-    --primary-gradient-with-opacity: linear-gradient(120deg, #0685cea9, #00f06099);
-    --secondary-gradient: linear-gradient(90deg, #68fff9, #45ff0a, #45ff0a);
-    --secondary-color-dark: #0167a1;
+    --primary-gradient: linear-gradient(120deg, #d6e833, #fe6601);
+    --primary-gradient-with-opacity: linear-gradient(120deg, #d6e833a1, #fe66018f);
     --skills-bg-color: #222c3e;
     --primary-font-stack: 'Poppins', sans-serif;
     --secondary-font-stack: 'Gellisa Script';
@@ -108,11 +108,13 @@ a:hover {
     border-radius: var(--_radius);
     cursor: pointer;
     transition: background var(--app-transitions-duration);
+    color: var(--secondary-text-color);
 }
 
 .btn:hover {
-    background: var(--secondary-color-dark);
-    color: var(--primary-text-color);
+    color: var(--secondary-text-color);
+    border: .1rem solid var(--primary-color);
+    background: var(--primary-gradient-with-opacity);
 }
 
 /*------------- header -------------*/
@@ -377,7 +379,6 @@ section#about {
     position: relative;
     padding: 4rem 2rem;
     border-radius: var(--_radius);
-    /* background: linear-gradient(172deg, rgba(28, 46, 58, .6) 47%, rgba(24, 69, 72, .6) 87%); */
     background: conic-gradient(from 30deg at 50% 50%, var(--primary-color-transparent), var(--secondary-color-transparent), var(--secondary-color-transparent), var(--primary-color-transparent));
 }
 
@@ -638,10 +639,11 @@ a.gototop:hover {
     gap: 2rem;
     padding: 3rem;
     background-color: var(--skills-bg-color);
-    border: 3px dashed var(--primary-color-80);
+    border: 3px solid var(--primary-color-80);
     border-radius: 1rem;
     opacity: 0.8;
     height: 100%;
+    background: conic-gradient(from 180deg at 51% 0%, var(--primary-color-transparent), var(--secondary-color-transparent), var(--secondary-color-transparent), var(--primary-color-transparent));
 }
 
 .skills .container .first-flex {
