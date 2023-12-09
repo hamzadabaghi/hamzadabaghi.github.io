@@ -18,10 +18,10 @@
     --primary-text-color: #fefefe;
     --secondary-text-color: #0e1111;
     --primary-color: #d6e833;
-    --primary-color-80: rgba(21, 255, 115, 0.235);
+    --primary-color-80: #d2e73080;
     --primary-color-transparent: #d6e8333a;
-    --secondary-color: #d2e730;
-    --secondary-color-transparent: #0686ce30;
+    --secondary-color: #fe6601;
+    --secondary-color-transparent: #d2e73030;
     --primary-gradient: linear-gradient(120deg, #d6e833, #fe6601);
     --primary-gradient-with-opacity: linear-gradient(120deg, #d6e833a1, #fe66018f);
     --skills-bg-color: #222c3e;
@@ -103,7 +103,7 @@ a:hover {
     width: fit-content;
     gap: .7rem;
     text-decoration: none;
-    background: var(--secondary-color);
+    background: var(--primary-color);
     padding: .8rem 2rem;
     border-radius: var(--_radius);
     cursor: pointer;
@@ -258,7 +258,7 @@ section#about {
     left: 0;
     transform: translateY(20%);
     opacity: .4;
-    filter: blur(1px);
+    filter: hue-rotate(250deg) blur(1px);
 }
 
 .bg-path-2 {
@@ -268,7 +268,7 @@ section#about {
     left: 0;
     transform: translateY(10%) rotate(.5turn);
     opacity: .4;
-    filter: blur(1px);
+    filter: hue-rotate(250deg) blur(1px);
 }
 
 .app-hero .column-1 {
@@ -443,10 +443,11 @@ section#about {
     right: 2rem;
     z-index: 1000;
     background: var(--primary-color);
-    padding: .5rem;
+    padding: 1em;
     border-radius: 50%;
     cursor: pointer;
     transform: translateX(300px);
+    color: var(--primary-bg-color);
     transition: background var(--app-transitions-duration), transform var(--app-transitions-duration);
 }
 
@@ -459,6 +460,7 @@ a.gototop:hover {
     -webkit-background-clip: none;
     background-clip: none;
     color: var(--primary-bg-color);
+    transform: scale(1.1) !important;
 }
 
 .two-columns {
@@ -592,7 +594,7 @@ a.gototop:hover {
     padding-inline: 1rem;
     margin-block: 1rem;
     border-left: 3px solid var(--primary-color-80);
-    gap: 0;
+    gap: 3rem;
 }
 
 .about-item-content span {
@@ -902,7 +904,9 @@ a.gototop:hover {
     .user-competence {
         grid-template-columns: repeat(2, 1fr);
     }
-
+    .gototop {
+        font-size: 25px;
+    }
 }
 
 @media screen and (max-width: 500px) {
