@@ -1,0 +1,115 @@
+body {
+  overflow-y: scroll;
+}
+
+main {
+  display: grid; 
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
+}
+
+
+.card {
+  width: 100%;
+  border: 1px solid white;
+  display: flex;
+  border-radius: 1rem;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.card_content{
+  padding: 1rem;
+}
+.card__image img {
+  width: 100%;
+  /* border-radius: 1rem; */
+}
+
+.card__caption {
+  display: flex;
+  padding: 1rem 0;
+  text-align: left;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.card__caption p {
+  font-size: 1.5rem;
+}
+
+
+
+.card__button {
+  border: 2px solid black;
+  padding: 1em;
+  width: 80%;
+  cursor: pointer;
+  margin-top: 2em;
+  font-weight: bold;
+  position: relative;
+}
+.card__rate{
+  display: flex;
+  gap: .5rem;
+  padding-block: 1rem;
+}
+.btn-holder{
+  display: flex;
+  padding-top: 1rem;
+  justify-content: center;
+}
+.card__button:before,
+.card__button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background-color: black;
+  transition: width 0.5s;
+}
+
+.card__button:before {
+  left: 0;
+  width: 0;
+}
+
+.card__button::after {
+  right: 0;
+  width: 0;
+}
+
+.card__button:hover::before,
+.card__button:hover::after {
+  width: 30%;
+}
+.card__add {
+  background: red;
+  color: white;
+  width: fit-content;
+  font-weight: bold;
+  padding: 1rem 3rem;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: .5rem;
+  cursor: pointer;
+  width: 100%;
+}
+
+
+@media screen and (max-width: 768px) {
+  :root {
+    grid-template-columns: 1fr;
+    font-size: 10px;
+  }
+  .card__button {
+    width: 100%;
+  }
+  .card__add {
+    width: 100%;
+  }
+}

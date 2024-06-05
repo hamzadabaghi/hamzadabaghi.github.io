@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="icon" href="/img/logo.ico" type="image/x-icon">
+    <link href="https://db.onlinewebfonts.com/c/a3fd7039bc65684a34371b2002a7711e?family=TCCC-UnityHeadline+Bold" rel="stylesheet">
+    <link href="https://db.onlinewebfonts.com/c/fae611b7bbde703025cc14fb29872e44?family=Mogra" rel="stylesheet">
+    <link href="/style/animate.css"  rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="/style/style-shop.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <main class="container" id="product-container">
+        <template id="card-template">
+            <div class="card">
+                <div class="card__image">
+                    <img src="" alt="Product Image">
+                </div>
+                <div class="card_content">
+                    <div class="card__caption">
+                        <p class="card__product-name"></p>
+                        <p class="card__price"></p>
+                    </div>
+                    <p class="card__rate">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </p>
+                <div class="btn-holder">
+                    <button class="card__add">Add to cart</button>
+                </div>
+            </div>
+            </div>
+        </template>
+    </main>    
+
+    <!-- needed to import the header part in this file -->
+    <script src="/js/script.js"></script>
+    <script src="/js/shop.js"></script>
+</body>
+</html>
