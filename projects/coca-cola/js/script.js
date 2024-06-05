@@ -1,4 +1,4 @@
-fetch('../pages/header.html')
+fetch('/projects/coca-cola/pages/header.html')
 .then(response => response.text())
 .then(data => {
   document.getElementById('header-placeholder').innerHTML = data;
@@ -14,7 +14,7 @@ function populateUi() {
   const navMenu = document.querySelectorAll('.menu');
   const navSheet = document.querySelector('.sheet');
 
-  const audio = new Audio('../audio/click-sound.mp3');
+  const audio = new Audio('/projects/coca-cola/audio/click-sound.mp3');
   const currentPath = (window.location.pathname.slice(window.location.pathname.lastIndexOf('/') + 1)).replace('.html', '');
   /***
    * this is for highlighting the current link
