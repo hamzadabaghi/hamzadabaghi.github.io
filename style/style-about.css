@@ -1,12 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
 main {
   padding-top: 2rem;
   display: flex;
   flex-direction: column;
   margin: auto;
 }
-
-/* ismail's code */
 
 
 :root {
@@ -16,16 +13,17 @@ main {
   --border: 0.1rem solid rgba(255, 255, 255, 0.3);
 }
 
-body{
-  font-family: "Roboto", sans-serif;
-  /* background: var(--bg); */
+body {
+  font-family: "TCCC-UnityHeadline Bold";
 }
 
-html, body{
+html,
+body {
   overflow-x: hidden;
   scroll-padding-top: 9rem;
   scroll-behavior: smooth;
 }
+
 /**
   * used the scroll  bar style from style.css 
   * you can edit it there
@@ -106,7 +104,7 @@ section {
   display: grid;
   grid-template-columns: 1fr;
   background: var(--black);
-  gap: 1.5rem;
+  /* gap: 1.5rem; */
 }
 
 .about .row .image img {
@@ -117,7 +115,7 @@ section {
 
 .about .row .content {
   /* flex: 1 1 45rem; */
-  padding: 2rem;
+  padding: 1.5rem;
 }
 
 .about .row .content h3 {
@@ -134,6 +132,6 @@ section {
 
 @container about-card (min-width: 900px) {
   .row {
-    grid-template-columns: repeat(2,1fr) !important;
+    grid-template-columns: repeat(2, 1fr) !important;
   }
 }
