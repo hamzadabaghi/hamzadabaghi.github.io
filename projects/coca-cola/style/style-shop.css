@@ -115,7 +115,7 @@ main {
     width: 100%;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
   main{
     grid-template-columns: 1fr;
   }
