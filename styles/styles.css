@@ -319,7 +319,8 @@ section#about {
 /*------------- main:projects -------------*/
 
 .project-container {
-    aspect-ratio: 16 / 9;
+    /*this enforces the width to be 16/9 times the height causing the overflow to occur*/
+    /* aspect-ratio: 16 / 9; */
 }
 
 .project-container .image-wrapper {
@@ -910,7 +911,7 @@ a.gototop:hover {
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
     :root {
         font-size: 12px;
         --app-inline-padding: 1rem;
