@@ -103,7 +103,6 @@ main {
 @media screen and (max-width: 768px) {
   :root {
     grid-template-columns: 1fr;
-    font-size: 10px;
   }
   main{
     grid-template-columns: 1fr ,1fr;
