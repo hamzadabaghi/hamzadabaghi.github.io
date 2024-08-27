@@ -1,9 +1,9 @@
 :root {
-  --primary-color: #F40009;
+  --primary-color: #f40009;
   --bg-color: #050a0f;
   --text-color: #f9fffb;
   --bg-color-white: #f9fffb;
-  --text-color-red: #F40009;
+  --text-color-red: #f40009;
   --primary-font-family: "TCCC-UnityHeadline Bold";
   --secondary-font-family: "Mogra";
   --light-gray-color: 211, 211, 211;
@@ -14,7 +14,9 @@
   --app-inline-padding: 4rem;
   --app-animations-duration: 300ms;
 }
-*,*::before,*::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -35,7 +37,8 @@ a {
   background-color: var(--bg-color);
 }
 
-html,body {
+html,
+body {
   scroll-behavior: smooth;
   overflow-x: hidden;
   height: 100%;
@@ -62,7 +65,7 @@ li a:hover {
   color: var(--primary-color);
 }
 
-.app-container{
+.app-container {
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -78,7 +81,7 @@ li a:hover {
   margin: auto;
   /* margin-bottom: 10rem; */
 }
-ul{
+ul {
   font-weight: 800;
 }
 
@@ -110,19 +113,19 @@ ul{
   transform: translateX(40%);
   z-index: 1;
 }
-.test{
+.test {
   position: absolute;
   height: 40px;
   background: orange;
   top: 3rem;
 }
-.circle-transition{
-    transition: left 0.3s ease-in-out;
+.circle-transition {
+  transition: left 0.3s ease-in-out;
 }
 .ellipse {
   height: 70px;
-  fill: #FFFFFF;
-  opacity: .4;
+  fill: #ffffff;
+  opacity: 0.4;
   filter: blur(5.5px);
   z-index: 10;
   margin-right: 60px;
@@ -142,7 +145,7 @@ ul{
 
 .logo:hover {
   filter: brightness(0) invert(1) grayscale(1);
-  transition: filter var(--app-animations-duration) ;
+  transition: filter var(--app-animations-duration);
 }
 
 .menu {
@@ -189,10 +192,10 @@ ul{
   background-color: var(--bg-color-white);
   color: var(--text-color-red);
 }
-.nav-link.active{
+.nav-link.active {
   color: var(--primary-color);
 }
-.nav-link-group{
+.nav-link-group {
   list-style: none;
   display: flex;
   align-items: center;
@@ -202,19 +205,20 @@ ul{
 }
 
 .btn {
-  --_main-color: #d3ad7f;
+  --_main-color: #d70d14;
   padding: 0.7rem 2rem;
   cursor: pointer;
   font-size: 1.3rem;
   background: var(--_main-color);
   color: #fff;
   text-transform: capitalize;
+  border-radius: 10px;
 }
 
 .btn:hover {
   letter-spacing: 0.2rem;
 }
-.sheet{
+.sheet {
   position: fixed;
   width: 90vw;
   height: 100dvh;
@@ -228,16 +232,16 @@ ul{
   transition: transform 0.3s ease-in-out;
   transform: translateX(100%);
 }
-.show{
+.show {
   transform: translateX(0%);
 }
-.sheet-header{
+.sheet-header {
   display: flex;
   width: 100%;
   flex-direction: row-reverse;
   padding: 1rem;
 }
-.sheet-link-group{
+.sheet-link-group {
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -245,66 +249,65 @@ ul{
   list-style: none;
   margin-block: 3rem;
   font-size: 2rem;
-
 }
 
-input{
+input {
   border: none;
 }
-main{
+main {
   padding: var(--app-inline-padding);
   max-width: 1536px;
   margin: 0 auto;
 }
 @media screen and (max-width: 850px) {
-  .nav-link-group{
+  .nav-link-group {
     display: none;
   }
-  .hero-container{
+  .hero-container {
     grid-template-columns: 1fr;
-    position: relative;    
+    position: relative;
   }
-  .hero-container img{
+  .hero-container img {
     z-index: 2;
-    opacity: .5;
+    opacity: 0.5;
   }
-  .hero-container::after{
-    content: '';
+  .hero-container::after {
+    content: "";
     inset: -3rem;
     z-index: -1;
     /* background: linear-gradient(90deg,#050a0f,#050a0f80); */
     position: absolute;
     filter: blur(10px);
   }
-  .bubbles{
+  .bubbles {
     margin-top: -7rem;
   }
-  .menu{
+  .menu {
     display: block;
   }
-  .quote{
+  .quote {
     align-items: center;
     text-align: center;
   }
-  .img-container{
+  .img-container {
     margin-left: 2rem;
     right: 0;
     z-index: -1;
-    position: absolute;    
+    position: absolute;
   }
-  .sheet{
+  .sheet {
     display: flex;
   }
-  :root{
-    --fs-normal: clamp(.8rem, 1.5vw, 1.5rem);
+  :root {
+    --fs-normal: clamp(0.8rem, 1.5vw, 1.5rem);
     --fs-small: clamp(0.6rem, 1.5vw, 1rem);
     --fs-big: clamp(3.5rem, 1.5vw, 6rem);
     --app-inline-padding: 2rem;
   }
-  .can{
+  .can {
     max-width: 400px;
   }
-  .big-screen-only{
+  .big-screen-only {
     display: none;
   }
 }

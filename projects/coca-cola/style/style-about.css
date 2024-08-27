@@ -5,7 +5,6 @@ main {
   margin: auto;
 }
 
-
 :root {
   --main-color: #d3ad7f;
   --black: #13131a;
@@ -50,7 +49,6 @@ section {
   container-type: inline-size;
 }
 
-
 .home-container {
   background: url(home-img.jpeg) no-repeat;
   background-size: cover;
@@ -67,7 +65,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: .5rem;
+  gap: 0.5rem;
 }
 
 .home .content h3 {

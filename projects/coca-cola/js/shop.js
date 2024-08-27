@@ -16,6 +16,8 @@ function productsData() {
         { image: "../img/14.png", name: "phone shell", price: "25$", rating: 3.9 },
         { image: "../img/15.png", name: "smelling candle", price: "10$", rating: 4.0 },
         { image: "../img/16.png", name: "mask decoration", price: "35$", rating: 4.8 },
+        { image: "../img/17.png", name: "coke sweater", price: "35$", rating: 5 },
+        { image: "../img/18.png", name: "bracelet", price: "15$", rating: 4.8 },
     ];
 }
 
