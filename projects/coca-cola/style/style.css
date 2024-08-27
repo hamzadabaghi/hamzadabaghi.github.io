@@ -63,12 +63,9 @@ li a:hover {
 }
 
 .app-container{
-  /* max-height: 100vh; */
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  /* max-width: 1500px; */
 }
 .hero-container {
   display: grid;
@@ -79,6 +76,7 @@ li a:hover {
   width: 100%;
   padding: 0 var(--app-inline-padding);
   margin: auto;
+  /* margin-bottom: 10rem; */
 }
 ul{
   font-weight: 800;
@@ -274,9 +272,12 @@ main{
     content: '';
     inset: -3rem;
     z-index: -1;
-    background: linear-gradient(90deg,#050a0f,#050a0f80);
+    /* background: linear-gradient(90deg,#050a0f,#050a0f80); */
     position: absolute;
     filter: blur(10px);
+  }
+  .bubbles{
+    margin-top: -7rem;
   }
   .menu{
     display: block;
