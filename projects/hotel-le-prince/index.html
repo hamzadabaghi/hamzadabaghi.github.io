@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotel le Prince</title>
+
+    
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+
+   
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+   
+    <section class="header">
+
+      <div class="mobileNavbar">
+        <a href="index.html" class="mobileLogo">
+          <img src="images/LogoV4.png" alt="Mobile Logo" />
+        </a>
+        <div id="menu-btn">
+          <i class="fas fa-bars"></i>
+          <i class="fas fa-times"></i>
+        </div>
+      </div>
+    
+      <nav class="navbar">
+        <div class="menu navbar-left">
+          <a href="#home">Menu</a>
+          <a href="#about">Nos services</a>
+          <a href="#dt">Reservation</a>
+        </div>
+        <div class="centered-logo">
+          <a href="index.html">
+            <img src="images/LogoV4.png" alt="Center Image" />
+          </a>
+        </div>
+        <div class="menu navbar-right">
+          <a href="#reservation">Nos Chambres</a>
+          <a href="#gallery">Galerie</a>
+          <a href="#contact-section">Contact</a>
+        </div>
+      </nav>
+    </section>
+
+    
+
+    <section class="home" id="home">
+      <div class="swiper home-slider">
+        <div class="swiper-wrapper">
+          <div class="box swiper-slide">
+            <img src="images/luxus.jpg" alt="" />
+            <div class="flex"></div>
+          </div>
+          <div class="box swiper-slide">
+            <img src="images/about-img-1.jpg" alt="" />
+            <div class="flex">
+             
+            </div>
+          </div>
+          <div class="box swiper-slide">
+            <img src="images/image3.jpg" alt="" />
+            <div class="flex"></div>
+          </div>
+          <div class="box swiper-slide">
+            <img src="images/image4.jpg" alt="" />
+            <div class="flex"></div>
+          </div>
+          <div class="box swiper-slide">
+            <img src="images/image5.jpg" alt="" />
+            <div class="flex"></div>
+          </div>
+          <div class="box swiper-slide">
+            <img src="images/image6.jpg" alt="" />
+            <div class="flex">
+            
+            </div>
+          </div>
+
+          
+
+         
+        </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+
+      <div class="book" id="dt">
+        <form class="book-form">
+          <div class="form-item">
+            <label for="checkin-date">Date d'arrivée: </label>
+            <input type="date" id="chekin-date" />
+          </div>
+          <div class="form-item">
+            <label for="checkout-date">Date de depart </label>
+            <input type="date" id="chekout-date" />
+          </div>
+          <div class="form-item">
+            <label for="adult">Adulte: </label>
+            <input type="number" min="1" value="1" id="adult" />
+          </div>
+          <div class="form-item">
+            <label for="children">Enfant: </label>
+            <input type="number" min="1" value="1" id="children" />
+          </div>
+          <div class="form-item">
+            <label for="rooms">Chambre: </label>
+            <input type="number" min="1" value="1" id="rooms" />
+          </div>
+          <div class="form-item">
+            <input type="submit" class="btn" value="Reserver" />
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <div class="separateur">
+
+      <div class="global-sevcice SERVICE">
+        <div> <h3> Nos Services</h3>
+          
+                                </div>
+      </div>
+      
+    </div>
+
+    <section class="about" id="about">
+      
+
+      
+
+      <div class="row">
+        <div class="image">
+          <img src="images/salle-sport.jpg" alt="" />
+        </div>
+        <div class="content">
+          <h3>Salle de sport</h3>
+          <p>
+            Découvrez notre salle de sport moderne et équipée, où chaque séance
+            devient un plaisir avec des machines dernier cri, un espace spacieux
+            et une vue inspirante
+          </p>
+        </div>
+      </div>
+    
+      <div class="separateur"></div>
+    
+
+      <div class="row">
+        <div class="content">
+          <h3>Piscine et Jacuzzi</h3>
+          <p>
+            Plongez dans notre piscine élégante et chauffée, entourée de chaises
+            longues confortables et d'un cadre apaisant pour une détente absolue
+          </p>
+        </div>
+        <div class="image">
+          <img src="images/piscine-jaccouzi.jpg" alt="" />
+        </div>
+      </div>
+      <div class="separateur"></div>
+      <div class="row">
+        <div class="image">
+          <img src="images/festivite.jpg" alt="" />
+        </div>
+        <div class="content">
+          <h3>Soirées inoubliables</h3>
+          <p>
+            Vivez des soirées inoubliables avec nos événements animés, où musique entraînante et ambiance festive se rencontrent pour créer des moments mémorables sous les étoiles.
+          </p>
+        </div>
+      </div>
+    
+      <div class="separateur"></div>
+      <div class="row revers">
+        <div class="image">
+          <img src="images/food-img.png" alt="" />
+        </div>
+        <div class="content">
+          <h3>Nourriture exceptionnelle</h3>
+          <p>
+            Savourez des repas délicieux et variés, concoctés avec des
+            ingrédients frais et locaux, pour une expérience culinaire qui ravit
+            tous les palais. Laissez-vous tenter par une cuisine raffinée,
+            servie dans une ambiance conviviale et élégante.
+          </p>
+        </div>
+      </div>
+
+     
+      <div class="separateur"></div>
+      <div class="row">
+        <div class="image">
+          <img src="images/service-img.jpg" alt="" />
+        </div>
+        <div class="content">
+          <h3>Service chaleureux</h3>
+          <p>
+            Vivez un accueil exceptionnel avec nos réceptionnistes chaleureux et
+            attentionnés, toujours prêts à rendre votre séjour inoubliable. Leur
+            sourire et leur service personnalisé feront de chaque interaction un
+            moment agréable et mémorable.
+          </p>
+        </div>
+      </div>
+
+      
+      <div class="separateur"></div>
+      <div class="row">
+        
+        <div class="content">
+          <h3>Massage et Relaxation</h3>
+          <p>
+            Offrez-vous un moment de pure détente avec nos massages apaisants,
+            réalisés par des professionnels experts dans une atmosphère sereine
+            et luxueuse. Reconnectez corps et esprit grâce à des soins
+            personnalisés qui revitalisent et relaxent en profondeur.
+          </p>
+        </div>
+        <div class="image">
+          <img src="images/massage.jpg" alt="" />
+        </div>
+      </div>
+    </section>
+
+   
+
+
+    <div class="separateur">
+      <div class="global-sevcice " id="reservation">
+        <div> <h3>Nos Chambres</h3></div>
+      </div>
+    </div>
+
+
+    <section class="room">
+      <div class="rooms-global">
+         <div class="image-rooms">
+            <img src="images/chambre1.jpg" alt="" />
+         </div>
+        <div class="content-rooms">
+         <h3>Evasion Prestige</h3>
+          <p>
+            Découvrez la Suite Évasion Prestige, une grande chambre luxueuse avec vue imprenable sur la mer, alliant élégance et confort. Profitez d'un espace climatisé avec un lit king-size, un canapé moelleux pour se détendre, et une ambiance raffinée propice au repos. Offrez-vous une expérience de relaxation ultime grâce à un service de massage privé directement dans votre suite, pour un séjour alliant luxe, sérénité et bien-être absolu.
+
+
+
+
+
+
+
+           
+          </p>
+          <button class="btn"> Je decouvre</button>
+        </div>
+      </div>
+      <div class="global-separateur">
+      <div class="separateur2"></div>
+    </div>
+
+      <div class="rooms-global">
+         <div class="image-rooms">
+            <img src="images/chambre2.jpg" alt="" />
+         </div>
+        <div class="content-rooms">
+         <h3>Royale Oceane</h3>
+          <p>
+            Bienvenue dans la Suite Royale Océane, un véritable havre de luxe et de tranquillité avec une vue panoramique imprenable sur la mer. Cette somptueuse suite climatisée vous offre un espace généreux agrémenté d'un canapé élégant, idéal pour des moments de détente. Plongez dans un confort inégalé avec un service de massage personnalisé dans votre chambre, pour une expérience de séjour digne des plus hauts standards de prestige et de raffinement.
+
+
+
+
+
+
+           
+          </p>
+          <button class="btn"> Je decouvre</button>
+        </div>
+      </div>
+
+      <div class="global-separateur">
+        <div class="separateur2"></div>
+      </div>
+  
+        <div class="rooms-global">
+           <div class="image-rooms">
+              <img src="images/chambre3.jpg" alt="" />
+           </div>
+          <div class="content-rooms">
+           <h3>Jardin d'Éden</h3>
+            <p>
+              Découvrez la Suite Jardin d'Éden, un écrin de sérénité niché au cœur de la verdure, offrant une vue exceptionnelle sur un jardin luxuriant. Cette chambre climatisée combine élégance et confort, avec un espace de vie raffiné et un canapé accueillant pour profiter pleinement de la quiétude des lieux. Plongez dans un cadre naturel enchanteur où chaque détail a été pensé pour un séjour paisible et ressourçant, en parfaite harmonie avec la beauté du jardin.
+  
+  
+  
+  
+             
+            </p>
+            <button class="btn"> Je decouvre</button>
+          </div>
+        </div>
+
+        
+      </div>
+      <div class="global-separateur">
+        <div class="separateur2"></div>
+      </div>
+  
+        <div class="rooms-global">
+           <div class="image-rooms">
+              <img src="images/chambre4.jpg" alt="" />
+           </div>
+          <div class="content-rooms">
+           <h3> Cosy Azur</h3>
+            <p>
+              Entrez dans la Suite Cosy Azur, un refuge intime et chaleureux avec une vue imprenable sur la mer. Cette chambre climatisée allie confort et élégance avec son décor soigné et son ambiance apaisante. Détendez-vous dans un espace douillet, idéal pour admirer le panorama marin depuis le confort de votre lit ou du coin salon. Chaque détail a été pensé pour offrir une expérience de séjour confortable et relaxante, bercée par le doux murmure des vagues.
+  
+  
+  
+             
+            </p>
+            <button class="btn"> Je decouvre</button>
+          </div>
+        </div>
+    </section>
+    <div class="separateur"></div>
+
+    <section class="services">
+      <div class="box-container">
+        <div class="box">
+          <img src="images/icon-1.png" alt="" />
+          <h3>Restaurant et Bars</h3>
+          <p>
+            restaurants et bars raffinés,restaurants et bars raffinés, servis dans des cadres élégants et chaleureux
+          </p>
+        </div>
+
+        <div class="box">
+          <img src="images/icon-2.png" alt="" />
+          <h3>Cocktail et boisson exotique</h3>
+          <p>
+            Savourez nos cocktails et boissons exotiques, créés par nos mixologues talentueux, pour une explosion de saveurs .
+        </div>
+
+        <div class="box">
+          <img src="images/icon-3.png" alt="" />
+          <h3>Vue magnifique </h3>
+          <p>
+            profitez d'une vue magnifique qui s'étend à perte de vue, offrant un panorama exceptionnel à chaque instant de la journée,
+          </p>
+        </div>
+
+        <div class="box">
+          <img src="images/icon-4.png" alt="" />
+          <h3>Soirée festives</h3>
+          <p>
+            Plongez dans nos soirées festives animées, où ambiance électrisante,pour créer des nuits inoubliables sous les étoiles.
+
+
+
+
+
+
+
+          </p>
+        </div>
+
+        <div class="box">
+          <img src="images/icon-5.png" alt="" />
+          <h3>Piscines</h3>
+          <p>
+            Plongez dans nos piscines élégantes, parfaites pour se détendre ou nager, offrant une oasis de fraîcheur et de luxe avec des vues splendides
+          </p>
+        </div>
+
+        <div class="box">
+          <img src="images/icon-6.png" alt="" />
+          <h3>Salle de sport </h3>
+          <p>
+            découvrez notre salle de sport moderne, entièrement équipée pour satisfaire tous vos besoins d'entraînement, dans un espace lumineux et motivant
+          </p>
+        </div>
+      </div>
+    </section>
+    <div class="separateur">
+      <div class="global-sevcice">
+        <div> <h3>Galerie</h3></div>
+      </div>
+    </div>
+
+
+
+    <!-- galerieie -->
+
+    <section class="gallery" id="gallery">
+      <div class="swiper gallery-slider">
+        <div class="swiper-wrapper">
+          <img src="images/galerie1.jpg" class="swiper-slide" alt="" />
+          <img src="images/galerie2.jpg" class="swiper-slide" alt="" />
+          <img src="images/galerie3.jpg" class="swiper-slide" alt="" />
+          <img src="images/galerie4.jpg" class="swiper-slide" alt="" />
+          <img src="images/galerie5.jpg" class="swiper-slide" alt="" />
+          <img src="images/galerie6.jpg" class="swiper-slide" alt="" />
+          <img src="images/galerie7.jpg" class="swiper-slide" alt="" />
+          <img src="images/galerie8.jpg" class="swiper-slide" alt="" />
+          <img src="images/galerie9.jpg" class="swiper-slide" alt="" />
+          <img src="images/galerie10.jpg" class="swiper-slide" alt="" />
+          <img src="images/galerie11.jpg" class="swiper-slide" alt="" />
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+    <div class="separateur">
+      <div class="global-sevcice">
+        <div> <h3>Contact</h3></div>
+      </div>
+    </div>
+
+    <!-- reservation section starts  -->
+
+    <section class="reservation" >
+      
+    </section>
+
+    <!-- reservation section ends -->
+
+    <!-- gallery section starts  -->
+
+    <!-- gallery section ends -->
+    <section class="contact-section" id="contact-section">
+    <h1 class="section-heading"><span>Contactez </span> Nous</h1>
+
+    <div class="form-container">
+      <form action="">
+        <h3>Vous serez rappelé en moins de 5 minutes</h3>
+        <div class="input-group">
+          <span class="icon fas fa-user"></span>
+          <input type="text" placeholder="NOM" />
+        </div>
+        <div class="input-group">
+          <span class="icon fas fa-envelope"></span>
+          <input type="email" placeholder="Email" />
+        </div>
+        <div class="input-group">
+          <span class="icon fas fa-phone"></span>
+          <input type="number" placeholder="telephone" />
+        </div>
+        <input type="submit" value="Contacter maintenant" class="submit-btn" />
+      </form>
+    </div>
+  </section>
+
+   
+
+          
+
+        
+
+    <!-- contact section ends -->
+
+    <!-- reviews section starts  -->
+    <!-- 
+    <section class="reviews" id="reviews">
+      <div class="swiper reviews-slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide box">
+            <img src="images/pic-1.png" alt="" />
+            <h3>john deo</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptates blanditiis optio dignissimos eaque aliquid explicabo.
+            </p>
+          </div>
+          <div class="swiper-slide box">
+            <img src="images/pic-2.png" alt="" />
+            <h3>john deo</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptates blanditiis optio dignissimos eaque aliquid explicabo.
+            </p>
+          </div>
+          <div class="swiper-slide box">
+            <img src="images/pic-3.png" alt="" />
+            <h3>john deo</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptates blanditiis optio dignissimos eaque aliquid explicabo.
+            </p>
+          </div>
+          <div class="swiper-slide box">
+            <img src="images/pic-4.png" alt="" />
+            <h3>john deo</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptates blanditiis optio dignissimos eaque aliquid explicabo.
+            </p>
+          
+    
+        &copy; copyright @ 2022 by mr. web designer | all rights reseved!
+      </div>
+    </section> 
+    
+    
+
+    footer section ends -->
+    <footer>
+      <div class="footerContainer">
+          <div class="socialIcons">
+              <a href=""><i class="fa-brands fa-facebook"></i></a>
+              <a href=""><i class="fa-brands fa-instagram"></i></a>
+              <a href=""><i class="fa-brands fa-twitter"></i></a>
+              <a href=""><i class="fa-brands fa-google-plus"></i></a>
+              <a href=""><i class="fa-brands fa-youtube"></i></a>
+          </div>
+          <div class="footerNav">
+              <ul>
+                  <li><a href="">Menu</a></li>
+                  <li><a href="">Nouvelle</a></li>
+                  <li><a href="">Hotel</a></li>
+                  <li><a href="">Contact</a></li>
+                  <li><a href="">Notre equipe</a></li>
+              </ul>
+          </div>
+          
+      </div>
+      <div class="footerBottom">
+          <p>Copyright &copy;2024; Designed by <span class="designer">Ismail Hassan</span></p>
+      </div>
+  </footer>
+  </body>
+    
+    
+  
+  
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    <!-- custom js file link  -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
