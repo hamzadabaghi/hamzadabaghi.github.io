@@ -19,7 +19,6 @@
 }
 
 :root {
-	font-size: 16px;
 	--primary-color: #f40009;
 	--bg-color: #050a0f;
 	--text-color: #f9fffb;
@@ -73,7 +72,6 @@ body {
 	color: var(--text-color);
 	width: 100%;
 	font-family: var(--primary-font-family);
-	/* font-size: var(--fs-normal); */
 }
 
 header {
@@ -359,15 +357,19 @@ main {
 	.big-screen-only {
 		display: none;
 	}
+
+	.quote-shadowed {
+		text-shadow: none;
+	}
 }
 
 /* media for high pexel density devices (2 dots per pexel)*/
 
-@media (min-resolution: 2dppx) {
-	:root {
-		font-size: 12px;
-	}
-	main {
-		max-width: 1100px;
-	}
-}
+/*@media (min-resolution: 2dppx) {*/
+/*	:root {*/
+/*		font-size: 12px;*/
+/*	}*/
+/*	main {*/
+/*		max-width: 1100px;*/
+/*	}*/
+/*}*/
