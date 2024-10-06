@@ -10,12 +10,14 @@
     <link href="/projects/coca-cola/style/animate.css"  rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
     <link rel="stylesheet" href="/projects/coca-cola/style/style.css">
+    <link rel="stylesheet" href="/projects/coca-cola/style/cart.css">
     <link rel="stylesheet" href="/projects/coca-cola/style/style-shop.css">
 </head>
 <body>
+
     <div id="header-placeholder"></div>
 
-    <main class="container" id="product-container">
+    <main class="container shop-container" id="product-container">
         <template id="card-template">
             <div class="card">
                 <div class="card__image">
@@ -40,6 +42,22 @@
             </div>
         </template>
     </main>    
+
+    <!-- Off-canvas Cart -->
+    <div id="cart" class="offcanvas-cart">
+        <div class="cart-header">
+            <h2>Cart</h2>
+            <span id="closeCart" class="close-cart">Close</span>
+        </div>
+        <div class="cart-content" id="cartItems">
+            <p class="cart-empty-txt">Your cart is empty</p>
+        </div>
+        <div class="cart-footer">
+            <p class="total">Total: $<span id="cartTotal">0.00</span></p>
+            <a href="#" class="cart_view-cart-button">View Cart</a>
+            <a href="#" class="cart_checkout-button">Checkout</a>
+        </div>
+    </div>
 
     <!-- needed to import the header part in this file -->
     <script src="/projects/coca-cola/js/script.js"></script>

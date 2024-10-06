@@ -1,0 +1,181 @@
+.offcanvas-cart {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 400px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.5s ease;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+}
+
+/* When cart is active (visible) */
+.offcanvas-cart.active {
+    right: 0;
+}
+
+@media (max-width: 575px) {
+    .offcanvas-cart{
+        width: 100vw;
+    }
+}
+
+/* Cart header */
+
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding: 20px;
+}
+
+.cart-header h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+.close-cart {
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    user-select: none;
+}
+
+.close-cart:hover{
+    text-decoration: underline;
+}
+
+
+
+/* Cart Content */
+
+.cart-content {
+    padding: 10px 20px;
+    overflow-y: auto;
+}
+
+.cart-empty-txt{
+    color: #333;
+}
+
+/* Cart Item */
+
+.cart-item{
+    display: flex;
+    align-items: flex-start;
+    padding: 10px 0;
+}
+
+.cart-item:not(:last-child){
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-item__info{
+    flex-grow: 1;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.cart-item__image{
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+.cart-item__name{
+    font-size: 18px;
+    color: #050f0a;
+}
+
+.cart-item__price{
+    font-size: 16px;
+    color: #333;
+    padding: 8px 0 10px 0; 
+}
+
+.item-quantity{
+    font-size: 16px;
+    color: #050f0a;
+}
+
+.remove-item {
+    flex-shrink: 0;
+    border: none;
+    background: transparent;
+    padding: 0;
+    width: 14px;
+    cursor: pointer;
+    margin-top: 6px;
+    opacity: 0.6;
+}
+
+.remove-item:hover{
+    opacity: 1;
+}
+
+.remove-item img{
+    width: 100%;
+}
+
+.remove-item:hover img{
+    filter: brightness(0) saturate(100%) invert(21%) sepia(86%) saturate(6091%) hue-rotate(356deg) brightness(100%) contrast(121%);
+}
+
+
+
+/* Cart Footer */
+
+.cart-footer {
+    margin-top: auto;
+    border-top: 1px solid #ccc;
+    padding: 20px;
+}
+
+.cart-footer .total{
+    display: flex;
+    justify-content: space-between;
+    color: #333;
+}
+
+.cart-footer .total span{
+    color: black;
+}
+
+.cart_view-cart-button{
+    display: block;
+    text-align: center;
+    padding: 15px;
+    border: 1px solid black;
+    margin: 20px 0 10px;
+    color: black;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.cart_view-cart-button:hover{
+    background: black;
+    color: white;
+}
+
+.cart_checkout-button{
+    display: block;
+    text-align: center;
+    padding: 15px;
+    background-color: red;
+    border: 1px solid red;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.cart_checkout-button:hover{
+    background-color: rgb(215, 0, 0);
+    border-color: rgb(215, 0, 0);
+}

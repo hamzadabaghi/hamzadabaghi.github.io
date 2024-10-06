@@ -4,8 +4,13 @@ body {
 
 main {
   display: grid; 
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
   gap: 1rem;
+}
+
+.shop-container{
+  max-width: 1300px;
+  padding-top: 2rem;
 }
 
 
@@ -19,7 +24,7 @@ main {
   overflow: hidden;
 }
 .card_content{
-  padding: 1rem;
+  padding: 0.8rem 1rem;
 }
 .card__image img {
   width: 100%;
@@ -28,15 +33,15 @@ main {
 
 .card__caption {
   display: flex;
-  padding: 1rem 0;
+  padding: 0.8rem 0;
   text-align: left;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.8rem;
   justify-content: space-between;
 }
 
 .card__caption p {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 
 
@@ -53,7 +58,7 @@ main {
 .card__rate{
   display: flex;
   gap: .5rem;
-  padding-block: 1rem;
+  padding-block: 0.8rem;
 }
 .btn-holder{
   display: flex;
@@ -97,6 +102,15 @@ main {
   border-radius: .5rem;
   cursor: pointer;
   width: 100%;
+}
+
+.card__add:hover{
+  background: rgb(203, 0, 0);
+}
+
+.card__add:active{
+  background: #fff;
+  color: black;
 }
 
 
